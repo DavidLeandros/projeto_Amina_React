@@ -1,0 +1,42 @@
+#menu {
+  position: fixed;
+  top: 0;
+  height: 56px;
+  width: 100%;
+  background-color: blueviolet;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#menu section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu section button {
+  background-color: #00000000;
+  border: none;
+  margin: 0 5px 0 5px;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+  transition-duration: 0.3s;
+}
+#menu section button:hover {
+  background-color: #00000022;
+}
+
+#menu section img {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+#menu section #avatar {
+  border: 2px solid white;
+}
