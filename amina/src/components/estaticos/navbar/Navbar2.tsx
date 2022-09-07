@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './Navbar.css'
 
 export default function Navbar2() {
@@ -9,7 +10,9 @@ export default function Navbar2() {
       <nav id="menu">
         
         <section>
-          <img src="https://i.imgur.com/IpO34nE.jpg" alt="Logo" />
+          {/*<Link to="/">*/}
+            <img src="https://i.imgur.com/coHfV2z.png" alt="Logo" />
+            {/*</Link>*/} 
           <button>Notificações</button>
           <button>Mensagens</button>
         </section>
