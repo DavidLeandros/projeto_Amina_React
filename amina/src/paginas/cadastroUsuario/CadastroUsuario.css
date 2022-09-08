@@ -1,0 +1,29 @@
+.bgCadastro{
+    background-image: url("https://i.imgur.com/smNyOms.png");
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box1{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+#box2{
+    display: flex;
+    margin-top: 0.5em;
+}
+section .input-campo{
+    margin: 1em;
+}
+.input-campo label{
+    margin-bottom: 0.5em;
+}
+.opGenero{
+    margin-right: 1em;
+}
+#imgcu{
+    margin-left: 3.8em;
+}

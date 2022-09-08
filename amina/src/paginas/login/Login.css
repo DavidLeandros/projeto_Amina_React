@@ -8,7 +8,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-body{
+main.bgLogin{
     background-image: url("https://i.imgur.com/n4v1WoJ.png");
     min-height: 100vh;
     min-width: 100vw;
