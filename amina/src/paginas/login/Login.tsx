@@ -1,9 +1,50 @@
-import React from 'react'
+import React, {useState, useEffect, ChangeEvent} from 'react'
 import './Login.css'
 import Navbar2 from '../../components/estaticos/navbar/Navbar2'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import UserLogin from '../../models/UserLogin'
+import useLocalStorage from 'react-use-localstorage'
+import {api} from '../../services/Service';
 
 export default function Home() {
+  let navigate = useNavigate();
+  const [token, setToken] = useLocalStorage('token');
+
+  const[userLogin, setUserLogin] = useState<UserLogin>({
+    id: 0,
+    email: '',
+    senha: '',
+    token: ''
+  })
+
+  function updatedModel(e: ChangeEvent<HTMLInputElement>){
+    setUserLogin({
+      ... userLogin,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  useEffect(() => {
+    if(token != ''){
+      navigate("/teste");
+    }
+  }, [token])
+
+  async function onSubmit(e: ChangeEvent<HTMLFormElement>){
+    e.preventDefault();
+
+    try{
+      const resposta = await api.post('api/Usuarios/logar', userLogin)
+      setToken(resposta.data.token)
+
+      {/*alert("Usuario logado com sucesso!");*/}
+    }
+    catch(error)
+    {
+      alert("Dados do usuário inconsistentes. Erro ao logar!");
+    }
+  }
+
   return (
     <>
       <main className="bgLogin">
@@ -13,23 +54,29 @@ export default function Home() {
             <img src="https://i.imgur.com/zboX1XL.png" alt="" />
             <p>Estamos muito animadas em ter você aqui!</p>
 
-            <form>
+            <form onSubmit={onSubmit}>
               <div className="input-campo">
                 <input
+                  id='email'
                   type="text"
-                  placeholder="Digite seu login"
-                  name="usuario"
+                  placeholder="Digite seu email"
+                  name="email"
                   required
+                  value={userLogin.email}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                 />
                 <div className="underline"></div>
               </div>
 
               <div className="input-campo">
                 <input
+                  id='senha'
                   type="password"
                   placeholder="Digite a senha"
-                  name="password"
+                  name="senha"
                   required
+                  value={userLogin.senha}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                 />
                 <div className="underline"></div>
               </div>
