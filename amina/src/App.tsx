@@ -5,6 +5,7 @@ import './App.css';
 import Login from './paginas/login/Login';
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 
+
 function App() {
   return (
     <>
