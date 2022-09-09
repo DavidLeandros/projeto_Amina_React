@@ -46,7 +46,7 @@ export default function CadastroUsuario() {
                             </section>
                             <button className='botao' type='button'>Registrar</button>
                             <Link to="/">
-                            <button className='botao' type='button'>Cancelar</button>
+                            <button className='botao' type='button'>Voltar</button>
                             </Link>
                         </form>
                     </div>
