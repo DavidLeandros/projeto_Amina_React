@@ -11,8 +11,8 @@ function App() {
      <Router>
         <Routes>
           <Route path='/' element={<Login/>}></Route>
-          <Route path='teste' element={<Navbar2/>}></Route>
-          <Route path='cadastro' element={<CadastroUsuario/>}></Route>
+          <Route path='/teste' element={<Navbar2/>}></Route>
+          <Route path='/cadastro' element={<CadastroUsuario/>}></Route>
         </Routes>
      </Router>
     </>
