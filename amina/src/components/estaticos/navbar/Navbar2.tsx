@@ -10,7 +10,7 @@ export default function Navbar2() {
       <nav id="menu">
         
         <section>
-          {/*<Link to="/">*/}
+          {/*<Link to="/home">*/}
             <img src="https://i.imgur.com/coHfV2z.png" alt="Logo" />
             {/*</Link>*/} 
           <button>Notificações</button>

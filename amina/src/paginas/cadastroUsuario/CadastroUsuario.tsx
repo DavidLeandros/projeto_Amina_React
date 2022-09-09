@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './CadastroUsuario.css';
 
 export default function CadastroUsuario() {
@@ -44,6 +45,9 @@ export default function CadastroUsuario() {
                                 </form>
                             </section>
                             <button className='botao' type='button'>Registrar</button>
+                            <Link to="/">
+                            <button className='botao' type='button'>Cancelar</button>
+                            </Link>
                         </form>
                     </div>
                 </div>
