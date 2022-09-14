@@ -6,6 +6,7 @@ import Login from './paginas/login/Login';
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import NavbarHome from './components/estaticos/navbar/NavbarHome';
 import Inicio from './paginas/inicio/Inicio';
+import Sobre from './paginas/sobre/Sobre';
 
 
 
@@ -19,6 +20,7 @@ function App() {
           <Route path='/teste' element={<Navbar2/>}></Route>
           <Route path='/cadastro' element={<CadastroUsuario/>}></Route>
           <Route path='/' element={<Inicio/>}></Route>
+          <Route path='/sobre' element={<Sobre/>}></Route>
         </Routes>
      </Router>
     </>
