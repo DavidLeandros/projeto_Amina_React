@@ -1,0 +1,10 @@
+#sobre{
+    background-color: #CEC0D5;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
