@@ -9,7 +9,7 @@
 }
 
 main.bgLogin {
-  background-image: url('https://i.imgur.com/n4v1WoJ.png');
+  background-image: url('https://i.imgur.com/smNyOms.png');
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
@@ -27,7 +27,7 @@ div.container {
   color: white;
 }
 .containerMenor {
-  background-color: #9e79be;
+  background-color: #545482;
   padding: 2rem;
   border-radius: 18px;
 }
