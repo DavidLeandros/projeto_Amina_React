@@ -12,14 +12,16 @@ export default function NavbarHome() {
       <nav id="menu">
 
         <section>
-          {/*<Link to="/home">*/}
+          <Link to="/">
           <img src="https://i.imgur.com/coHfV2z.png" alt="Logo" />
-          {/*</Link>*/}
+          </Link>
 
         </section>
 
         <section>
+          <Link to="/sobre">
           <button>Sobre</button>
+          </Link>
           <button>Termos e Privacidade</button>
           {
             token === ''

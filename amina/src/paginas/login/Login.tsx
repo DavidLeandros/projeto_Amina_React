@@ -1,46 +1,47 @@
-import React, {useState, useEffect, ChangeEvent} from 'react'
+import React, { useState, useContext, useEffect, ChangeEvent } from 'react'
 import './Login.css'
-import Navbar2 from '../../components/estaticos/navbar/Navbar2'
 import { Link, useNavigate } from 'react-router-dom'
 import UserLogin from '../../models/UserLogin'
 import useLocalStorage from 'react-use-localstorage'
-import {login} from '../../services/Service';
+import { login } from '../../services/Service'
+import { UsuarioContext } from '../../context/UsuarioContext'
 
 export default function Home() {
-  let navigate = useNavigate();
-  const [token, setToken] = useLocalStorage('token');
+  const navigate = useNavigate()
+  const { usuario, logarUsuario } = useContext(UsuarioContext)
 
-  const[userLogin, setUserLogin] = useState<UserLogin>({
+  const [userLogin, setUserLogin] = useState<UserLogin>({
     id: 0,
     email: '',
     senha: '',
     token: ''
   })
 
-  function updatedModel(e: ChangeEvent<HTMLInputElement>){
+  function updatedModel(e: ChangeEvent<HTMLInputElement>) {
     setUserLogin({
-      ... userLogin,
+      ...userLogin,
       [e.target.name]: e.target.value
     })
   }
 
   useEffect(() => {
-    if(token != ''){
-      navigate("/teste");
+    if (usuario && usuario.token) {
+      navigate('/feed')
     }
-  }, [token])
+  }, [usuario])
 
-  async function onSubmit(e: ChangeEvent<HTMLFormElement>){
-    e.preventDefault();
+  async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+    e.preventDefault()
 
-    try{
-      await login('api/Usuarios/logar', userLogin, setToken)
+    try {
+      await logarUsuario({
+        email: userLogin.email,
+        senha: userLogin.senha
+      })
 
-      {/*alert("Usuario logado com sucesso!");*/}
-    }
-    catch(error)
-    {
-      alert("Dados do usuário inconsistentes. Erro ao logar!");
+      /*alert("Usuario logado com sucesso!");*/
+    } catch (error) {
+      alert('Dados do usuário inconsistentes. Erro ao logar!')
     }
   }
 
@@ -56,26 +57,30 @@ export default function Home() {
             <form onSubmit={onSubmit}>
               <div className="input-campo">
                 <input
-                  id='email'
+                  id="email"
                   type="text"
                   placeholder="Digite seu email"
                   name="email"
                   required
                   value={userLogin.email}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                    updatedModel(e)
+                  }
                 />
                 <div className="underline"></div>
               </div>
 
               <div className="input-campo">
                 <input
-                  id='senha'
+                  id="senha"
                   type="password"
                   placeholder="Digite a senha"
                   name="senha"
                   required
                   value={userLogin.senha}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                    updatedModel(e)
+                  }
                 />
                 <div className="underline"></div>
               </div>
@@ -87,7 +92,7 @@ export default function Home() {
                 <button className="botao" type="button">
                   Registrar
                 </button>
-              </Link> 
+              </Link>
             </form>
           </div>
         </div>
