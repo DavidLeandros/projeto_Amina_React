@@ -1,5 +1,9 @@
 #sobre{
     background-color: #CEC0D5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 #container{
@@ -7,4 +11,20 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 5em;
+    width: 45%;
 }
+ #perfil{
+    margin-top: 7em;
+    margin-bottom: 2em;
+    width: 100%;
+ }
+
+ .perfilBox{
+    display: flex;
+    justify-content: space-evenly;
+ }
+
+ #ImagemTitulo{
+    margin-bottom: 2em;
+ }
