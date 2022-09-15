@@ -14,10 +14,9 @@ function CadastroUsuario() {
             id: 0,
             email: '',
             nome: '',
-            genero: '',
             senha: '',
             urlFoto: '',
-            tipo: '',
+            tipo: 'NORMAL',
             dataNascimento: ''
         })
 
@@ -26,7 +25,6 @@ function CadastroUsuario() {
             id: 0,
             email: '',
             nome: '',
-            genero: '',
             senha: '',
             urlFoto: '',
             tipo: '',
@@ -39,6 +37,9 @@ function CadastroUsuario() {
         }
     }, [userResult])
 
+    function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>){
+        setConfirmarSenha(e.target.value)
+    }
 
     function updatedModel(e: ChangeEvent<HTMLInputElement>) {
 
@@ -47,17 +48,20 @@ function CadastroUsuario() {
             [e.target.name]: e.target.value
         })
 
+        console.log(user);
+
     }
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
-        if(confirmarSenha == user.senha){
-        cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
-        alert('Usuario cadastrado com sucesso')
-        }else{
-            alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
-        }
-    }
+        //if(confirmarSenha == user.senha){
+            cadastroUsuario('/api/Usuarios/cadastrar', user, setUserResult)
+            alert('Usuario cadastrado com sucesso')
+            navigate("/login")
+        {/*}}else{
+            alert('Dados inconsistentes. Por favor, verifique as informações do cadastro.')
+        }*/}
 
+    }
     
     return (
         <>
@@ -79,28 +83,25 @@ function CadastroUsuario() {
                                 </div>
                                 <div className="input-campo">
                                     <label htmlFor="">Senha:</label>
-                                    <input  value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} type="password" placeholder='Digite sua Senha' name='senha' required />
+                                    <input value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} type="password" placeholder='Digite sua Senha' name='senha' required />
                                     <div className='underline'></div>
                                 </div>
+                                {/*<div className="input-campo">
+                                    <label htmlFor="">Confirmar Senha:</label>
+                                    <input value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} type="password" placeholder='Confirme sua senha' name='confirmarSenha' required />
+                                    <div className='underline'></div>
+                                </div>*/}
                                 <div className="input-campo">
                                     <label htmlFor="">Data de Nascimento:</label>
-                                    <input value={user.dataNascimento} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} type="date" />
+                                    <input value={user.dataNascimento} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} type="date" name="dataNascimento"/>
+                                </div>
+                                <div className="input-campo">
+                                    <label htmlFor="">URL Foto:</label>
+                                    <input value={user.urlFoto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} type="text" placeholder='Insira a URL da foto' name='urlFoto' required />
+                                    <div className='underline'></div>
                                 </div>
                             </section>
-                            <section className='box1'>
-                                <form action="">
-                                <label htmlFor="">Gênero:</label>
-                                    <div id='box2'>
-                                        <input type="radio" name='genero' value='Masculino' />
-                                        <label className='opGenero'>Masculino</label>
-                                        <input type="radio" name='genero' value='Feminino' />
-                                        <label className='opGenero'>Feminino</label>
-                                        <input type="radio" name='genero' value='Prefiro não declarar' />
-                                        <label className='opGenero'>Prefiro não declarar</label>
-                                    </div>
-                                </form>
-                            </section>
-                            <button className='botao' type='button'>Registrar</button>
+                            <button className='botao' type='submit'>Registrar</button>
                             <Link to="/">
                             <button className='botao' type='button'>Voltar</button>
                             </Link>
