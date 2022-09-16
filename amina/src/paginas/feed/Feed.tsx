@@ -9,14 +9,46 @@ export default function Feed() {
       <header>
         <Navbar />
       </header>
-      <main className="container">
-        <h1>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus
-          reprehenderit nobis ea debitis cum qui velit autem mollitia odio nemo.
-          Officiis ea explicabo illum cupiditate beatae quaerat sapiente, in
-          accusamus?
-        </h1>
-      </main>
+      <div className="corpo">
+          <main className="container">
+            <div className="containerConteudo">
+              <aside id="perfilContainer">
+                <div id="fotoPerfil">
+                    <div id="fotoPerfilBox">
+                      <img src="https://i.imgur.com/da6i9Eh.png" alt="" />
+                      </div>
+                </div>
+                <section id="menuPerfil">
+                    <ul>
+                      <li>Editar Perfil</li>
+                      <li>Publicações</li>
+                      <li>Configurações</li>
+                      <li>Sair</li>
+                      <li>Denunciar Abuso</li>
+                    </ul>
+                </section>
+              </aside>
+
+              <main>
+                <div id="feedContainer">
+                      <section id="postBox">
+                          <input id="inputPostBox" type="text" />
+                      </section>
+                      <section id="postagensBox">
+                        
+                      </section>
+                </div>
+              </main>
+              
+                <nav id="grupoContainer">
+                    <div className="grupoBox"></div>
+                    <div className='grupoBox'></div>
+                </nav>
+            
+              
+            </div>
+          </main>
+      </div>
     </>
   )
 }

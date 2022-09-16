@@ -1,3 +1,82 @@
-.container {
-  margin-top: 48px;
+.corpo{
+  height: 100vh;
 }
+.container {
+  padding-top: 1.5em;
+  background-color: #CEC0D5;
+}
+.containerConteudo{
+  margin-top: 0.5em;
+  padding: 3em;
+  display: flex;
+  justify-content: space-between;
+}
+
+#perfilContainer{
+  background-color: #D9D9D9;
+  display: inline-flex;
+  flex-direction: column;
+  width: 11em;
+  height: 25em;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 8px #494747;
+  border-radius: 0px 5px 5px 0px;
+}
+#menuPerfil{
+  margin-left: 2em;
+}
+#fotoPerfilBox{
+  border: 1 solid black;
+  margin-top: -7em;
+  
+}
+#fotoPerfil{
+  
+}
+
+
+
+
+
+/*FEED BOX */
+#feedContainer{
+    display: flex;
+    flex-direction: column;
+    width: 45em;
+    height: 35em;
+    background-color: white;
+    box-shadow: 10px 10px 8px #494747;
+    border-radius: 0px 25px 25px 0px;
+}
+#postBox{
+    top: 50px;
+    position: relative;
+    
+}
+#inputPostBox{
+    background-color: black;
+    position: relative;
+}
+
+#postagensBox{
+    background-color: blue;
+}
+
+
+
+
+
+
+
+
+/*Grupo Container */ 
+#grupoContainer{
+  margin-top: 5em;
+  width: 15em;
+  height: 30em;
+  background-color: white;
+  box-shadow: 10px 10px 8px #494747;
+  border-radius: 0px 5px 5px 0px;
+}
+
