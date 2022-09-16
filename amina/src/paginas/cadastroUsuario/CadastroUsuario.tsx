@@ -4,6 +4,7 @@ import User from '../../models/User';
 import { cadastroUsuario } from '../../services/Service';
 import { Link } from 'react-router-dom';
 import './CadastroUsuario.css';
+import NavbarHome from '../../components/estaticos/navbar/NavbarHome';
 
 function CadastroUsuario() {
 
@@ -65,6 +66,7 @@ function CadastroUsuario() {
     
     return (
         <>
+        <NavbarHome/>
             <main className='bgCadastro'>
                 <div className='container'>
                     <div className="containerMenor">
@@ -72,7 +74,7 @@ function CadastroUsuario() {
                         <form onSubmit={onSubmit}>
                             <section>
                                 <div className='input-campo'>
-                                    <label htmlFor="">Nome:</label>
+                                    <label htmlFor="">Nome</label>
                                     <input value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} type="text" placeholder='Digite seu Nome' name='nome' required />
                                     <div className='underline'></div>
                                 </div>
@@ -95,15 +97,11 @@ function CadastroUsuario() {
                                     <label htmlFor="">Data de Nascimento:</label>
                                     <input value={user.dataNascimento} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} type="date" name="dataNascimento"/>
                                 </div>
-                                <div className="input-campo">
-                                    <label htmlFor="">URL Foto:</label>
-                                    <input value={user.urlFoto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} type="text" placeholder='Insira a URL da foto' name='urlFoto' required />
-                                    <div className='underline'></div>
-                                </div>
+                                
                             </section>
-                            <button className='botao' type='submit'>Registrar</button>
+                            <button className='botao' type='submit'>Cadastrar</button>
                             <Link to="/">
-                            <button className='botao' type='button'>Voltar</button>
+                            <button className='botao2' type='button'>Voltar</button>
                             </Link>
                         </form>
                     </div>

@@ -27,3 +27,15 @@ section .input-campo{
 #imgcu{
     margin-left: 3.8em;
 }
+.botao2{
+    margin-top: 2rem;
+  padding: 0.4rem;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 300;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  width: 100%;
+}

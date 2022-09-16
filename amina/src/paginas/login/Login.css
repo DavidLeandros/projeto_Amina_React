@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 
 * {
   margin: 0;
@@ -6,6 +7,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+
 }
 
 main.bgLogin {
@@ -66,7 +68,27 @@ form .input-campo:first-child {
 .botao {
   margin-top: 2rem;
   padding: 0.4rem;
-  background-color: #df8837;
+  background-color: #EA652D;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-weight: bold;
+
+}
+
+.botao:hover {
+  letter-spacing: 0.7px;
+  background-color: #FB9A71;
+}
+
+.botao2{
+  margin-top: 2rem;
+  padding: 0.4rem;
+  background-color: transparent;
   cursor: pointer;
   color: white;
   font-size: 0.9rem;
@@ -74,13 +96,8 @@ form .input-campo:first-child {
   border-radius: 4px;
   transition: all 0.3s ease;
   width: 100%;
-}
 
-.botao:hover {
-  letter-spacing: 0.7px;
-  background-color: #fd7200;
 }
-
 .botao:first-child {
   margin-bottom: 2em;
 }

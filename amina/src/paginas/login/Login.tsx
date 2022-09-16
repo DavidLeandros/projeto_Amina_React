@@ -5,6 +5,7 @@ import UserLogin from '../../models/UserLogin'
 import useLocalStorage from 'react-use-localstorage'
 import { login } from '../../services/Service'
 import { UsuarioContext } from '../../context/UsuarioContext'
+import NavbarHome from '../../components/estaticos/navbar/NavbarHome'
 
 export default function Home() {
   const navigate = useNavigate()
@@ -47,6 +48,7 @@ export default function Home() {
 
   return (
     <>
+    <NavbarHome/>
       <main className="bgLogin">
         <div className="container">
           <div className="containerMenor">
@@ -87,12 +89,8 @@ export default function Home() {
               <button className="botao" type="submit" value="Entrar">
                 Entrar
               </button>
-              <p id="txt">Não possui conta: Então registre-se agora mesmo! </p>
-              <Link to="/cadastro">
-                <button className="botao" type="button">
-                  Registrar
-                </button>
-              </Link>
+              <p id="txt">Não tem conta? <Link to="/cadastro" className='botao2'> Cadastrar</Link> </p>
+    
             </form>
           </div>
         </div>
