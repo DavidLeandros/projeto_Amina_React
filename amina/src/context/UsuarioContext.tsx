@@ -30,6 +30,7 @@ interface IUsuarioProviderProps {
 // Crio quem vai providenciar o contexto
 export const UsuarioProvider = ({ children }: IUsuarioProviderProps) => {
   const [token, setToken] = useLocalStorage('token')
+  const [nameUser, setNameUser] = useLocalStorage('name')
 
   // Salva as informações do usuário em um estado.
   const [usuario, setUsuario] = useState<IUsuario>({} as IUsuario)
@@ -38,7 +39,7 @@ export const UsuarioProvider = ({ children }: IUsuarioProviderProps) => {
   async function logarUsuario({ email, senha }: ILogarUsuarioProps) {
     try {
       // faz a requisição pro backend das informações do usuário que tentou logar
-      const response = await api.post('Usuarios/logar', {
+      const response = await api.post('/api/Usuarios/logar', {
         email,
         senha
       })
@@ -48,6 +49,8 @@ export const UsuarioProvider = ({ children }: IUsuarioProviderProps) => {
         ...response.data,
         ...response.data.usuario
       })
+
+      setNameUser(response.data.usuario.nome)
 
       // Salva o token no localStorage
       setToken(response.data.token)

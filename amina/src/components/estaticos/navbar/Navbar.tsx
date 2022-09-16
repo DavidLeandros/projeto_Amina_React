@@ -1,11 +1,12 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import useLocalStorage from 'react-use-localstorage'
 import { UsuarioContext } from '../../../context/UsuarioContext'
 import './Navbar.css'
 
 export default function Navbar2() {
-  const { usuario } = useContext(UsuarioContext)
-  const name = usuario.nome
+  const [nameUser, setNameUser] = useLocalStorage('name')
+  const { usuario } = useContext(UsuarioContext);
 
   return (
     <>
@@ -20,7 +21,7 @@ export default function Navbar2() {
 
         <section>
           <img id="avatar" src="https://i.imgur.com/IpO34nE.jpg" alt="Foto" />
-          <label>{name}</label>
+          <label>{nameUser}</label>
         </section>
       </nav>
     </>
