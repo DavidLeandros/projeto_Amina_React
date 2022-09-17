@@ -1,6 +1,8 @@
+import { Grid, Paper} from '@material-ui/core'
 import React, { useContext } from 'react'
 import Navbar from '../../components/estaticos/navbar/Navbar'
 import { UsuarioContext } from '../../context/UsuarioContext'
+import { Box } from "@mui/material";
 import './Feed.css'
 
 export default function Feed() {
