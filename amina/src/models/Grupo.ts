@@ -1,13 +1,12 @@
-import Grupo from "./Grupo";
 import User from "./User";
 
-interface Postagem{
+interface Grupo{
     id: number;
     titulo: string;
     descricao: string;
-    img: string;
+    topico: string;
+    midia: string;
     usuario?: User| null;
-    grupo?: Grupo| null;
 }
 
-export default Postagem;
+export default Grupo;

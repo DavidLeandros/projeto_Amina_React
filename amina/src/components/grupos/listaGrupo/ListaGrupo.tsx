@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import './ListaPostagem.css';
-import Postagem from "../../../models/Postagem";
+import './ListaGrupo.css';
+import Grupo from "../../../models/Grupo";
 import useLocalStorage from "react-use-localstorage";
 import { busca } from "../../../services/Service";
 
-export default function ListaPostagem() {
-    const [posts, setPosts] = useState<Postagem[]>([])
+export default function ListaGrupo() {
+    const [grupos, setGrupos] = useState<Grupo[]>([])
     const [token, setToken] = useLocalStorage('token')
     let navigate = useNavigate();
 
@@ -17,8 +17,8 @@ export default function ListaPostagem() {
         }
     }, [token])
 
-    async function getPost() {
-        await busca("/postagem", setPosts, {
+    async function getGrupos() {
+        await busca("/grupo", setGrupos, {
             headers: {
                 'Authorization': token
             }
@@ -26,16 +26,15 @@ export default function ListaPostagem() {
     }
 
     useEffect(() => {
-        getPost()
-    }, [posts.length])
+        getGrupos()
+    }, [grupos.length])
 
     return (
         <>
             {
-                posts.map(post => (
+                grupos.map(grupo => (
                 ))
             }
         </>
     )
 }
-
