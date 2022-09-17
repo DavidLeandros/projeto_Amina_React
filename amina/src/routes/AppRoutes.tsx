@@ -6,6 +6,7 @@ import Inicio from '../paginas/inicio/Inicio'
 import Sobre from '../paginas/sobre/Sobre'
 import Feed from '../paginas/feed/Feed'
 import { UsuarioContext } from '../context/UsuarioContext'
+import ListaPostagem from '../components/postagens/listaPostagem/ListaPostagem'
 
 export function AppRoutes() {
   // const { usuario } = useContext(UsuarioContext)
@@ -18,6 +19,7 @@ export function AppRoutes() {
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<CadastroUsuario />} />
         <Route path="/feed" element={<Feed />} />
+        <Route path="/listaPostagem" element={<ListaPostagem />} />
       </Routes>
     </Router>
   )
