@@ -63,7 +63,7 @@ function DeletarTema(){
                                 {post?.descricao}
                             </Typography>
                             <Typography color="textSecondary">
-                                {post?.img}
+                                {post?.foto}
                             </Typography>
                         </Box>
                     </CardContent>

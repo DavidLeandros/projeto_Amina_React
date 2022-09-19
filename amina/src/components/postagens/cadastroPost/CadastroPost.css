@@ -1,3 +1,17 @@
-.topo{
-    margin-top: 20px;
+#cadastroPost {
+    padding: 20px;
+}
+
+#cadastroPost input[type=text] {
+    background-color: rgb(182, 182, 255);
+    width: 100%;
+    margin: 5px;
+}
+
+#cadastroPost button {
+    background-color: rgb(149, 248, 157);
+    width: 100%;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
 }

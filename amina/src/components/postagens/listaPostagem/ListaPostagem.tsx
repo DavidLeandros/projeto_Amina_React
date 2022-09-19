@@ -7,13 +7,15 @@ import Postagem from "../../../models/Postagem";
 import useLocalStorage from "react-use-localstorage";
 import { busca } from "../../../services/Service";
 
+
 export default function ListaPostagem() {
     const [posts, setPosts] = useState<Postagem[]>([])
     const [token, setToken] = useLocalStorage('token')
+
     let navigate = useNavigate();
 
     useEffect(() => {
-        if (token == '') {
+        if (token === '') {
             alert("Você precisa estar logado!")
             navigate("/login")
         }
@@ -35,7 +37,7 @@ export default function ListaPostagem() {
         <>
             {
                 posts.map(post => (
-                    <Box m={2}>
+                    <Box m={0.2}>
                         <Card variant="outlined">
                             <CardContent>
                                 <Typography color="textSecondary" gutterBottom>
@@ -48,7 +50,7 @@ export default function ListaPostagem() {
                                     {post.descricao}
                                 </Typography>
                                 <Typography variant="h6" component="p">
-                                    {post.img}
+                                    {post.foto}
                                 </Typography>
                             </CardContent>
                             <CardActions>
@@ -75,6 +77,7 @@ export default function ListaPostagem() {
                     </Box>
                 ))
             }
+
         </>
     )
 }

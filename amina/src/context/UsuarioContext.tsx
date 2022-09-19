@@ -31,6 +31,7 @@ interface IUsuarioProviderProps {
 export const UsuarioProvider = ({ children }: IUsuarioProviderProps) => {
   const [token, setToken] = useLocalStorage('token')
   const [nameUser, setNameUser] = useLocalStorage('name')
+  const [idUser, setIdUser] = useLocalStorage('id')
 
   // Salva as informações do usuário em um estado.
   const [usuario, setUsuario] = useState<IUsuario>({} as IUsuario)
@@ -51,6 +52,8 @@ export const UsuarioProvider = ({ children }: IUsuarioProviderProps) => {
       })
 
       setNameUser(response.data.usuario.nome)
+
+      setIdUser(response.data.usuario.id)
 
       // Salva o token no localStorage
       setToken(response.data.token)
