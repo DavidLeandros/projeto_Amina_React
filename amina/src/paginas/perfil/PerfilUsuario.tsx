@@ -1,20 +1,11 @@
-import { Grid, Paper} from '@material-ui/core'
-import React, { useContext } from 'react'
-import Navbar from '../../components/estaticos/navbar/Navbar'
-import { UsuarioContext } from '../../context/UsuarioContext'
-import { Box } from "@mui/material";
-import './Feed.css'
-import useLocalStorage from 'react-use-localstorage';
+import React from 'react';
+import Navbar from '../../components/estaticos/navbar/Navbar';
 
-export default function Feed() {
-  const [nameUser, setNameUser] = useLocalStorage('name');
-
-  return (
-    <>
-      <header>
-        <Navbar />
-      </header>
-      <div className="corpo">
+export default function PerfilUsuario() {
+    return (
+        <>
+            <header><Navbar /> </header>
+            <div className="corpo">
           <main className="container">
             <div className="containerConteudo">
               <aside id="perfilContainer">
@@ -37,8 +28,6 @@ export default function Feed() {
               <main>
                 <div id="feedContainer">
                       <section id="postBox">
-                      <label>{nameUser}</label>
-                      <p>O que você está pensando?</p>
                           <input id="inputPostBox" type="text" />
                       </section>
                       <section id="postagensBox">
@@ -52,12 +41,8 @@ export default function Feed() {
 
                     <div className='grupoBox'></div>
                 </nav>
-                
-            
-              
             </div>
           </main>
       </div>
-    </>
-  )
-}
+        </>
+    )}

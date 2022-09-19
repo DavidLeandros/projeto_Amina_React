@@ -12,6 +12,7 @@ import CadastroPost from '../components/postagens/cadastroPost/CadastroPost'
 import CadastroGrupo from '../components/grupos/cadastroGrupo/CadastroGrupo'
 import DeletarGrupo from '../components/grupos/deletarGrupo/DeletarGrupo'
 import DeletarPostagem from '../components/postagens/deletarPostagem/DeletarPostagem'
+import PerfilUsuario from '../paginas/perfil/PerfilUsuario'
 
 export function AppRoutes() {
   // const { usuario } = useContext(UsuarioContext)
@@ -34,6 +35,8 @@ export function AppRoutes() {
         <Route path="/formularioGrupo" element={<CadastroGrupo />} />
         <Route path="/formularioGrupo/:id" element={<CadastroGrupo />} />
         <Route path="/deletarGrupo/:id" element={<DeletarGrupo />}/>
+
+        <Route path='perfil' element={<PerfilUsuario />}></Route>
       </Routes>
     </Router>
   )
