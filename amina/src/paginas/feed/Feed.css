@@ -50,13 +50,20 @@
     border-radius: 0px 25px 25px 0px;
 }
 #postBox{
-    top: 50px;
-    position: relative;
-    
+    height: 30%;
+    background-color: antiquewhite;
+    border-bottom:  1px solid black;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 #inputPostBox{
-    background-color: black;
-    position: relative;
+    background-color: rgb(255, 255, 255);
+    height: 5em;
+    border-radius: 15px;
+    width: 60%;
+    height: 4em;
 }
 
 #postagensBox{
@@ -70,13 +77,22 @@
 
 
 
+
 /*Grupo Container */ 
 #grupoContainer{
+  display: flex;
+  flex-direction: column;
   margin-top: 5em;
   width: 15em;
   height: 30em;
-  background-color: white;
-  box-shadow: 10px 10px 8px #494747;
-  border-radius: 0px 5px 5px 0px;
-}
 
+}
+.grupoBox:first-child{
+    margin-bottom: 1.5em;
+}
+.grupoBox{
+    background-color: rgb(255, 255, 255);
+    height: 15em;  
+    box-shadow: 10px 10px 8px #494747;
+    border-radius: 0px 5px 5px 0px;
+}

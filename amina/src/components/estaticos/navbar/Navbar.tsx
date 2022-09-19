@@ -1,13 +1,21 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import useLocalStorage from 'react-use-localstorage'
 import { UsuarioContext } from '../../../context/UsuarioContext'
 import './Navbar.css'
 
 export default function Navbar2() {
-  const [nameUser, setNameUser] = useLocalStorage('name')
+  const [nameUser, setNameUser] = useLocalStorage('name');
   const { usuario } = useContext(UsuarioContext);
+  const [token, setToken] = useLocalStorage('token');
+  let navigate = useNavigate();
 
+  function goLogout(){
+    setToken('')
+    setNameUser('')
+    alert("Usuário deslogado")
+    navigate('/')
+  }
   return (
     <>
       <nav id="menu">
@@ -22,6 +30,7 @@ export default function Navbar2() {
         <section>
           <img id="avatar" src="https://i.imgur.com/IpO34nE.jpg" alt="Foto" />
           <label>{nameUser}</label>
+          <button onClick={goLogout}>Sair</button>
         </section>
       </nav>
     </>
