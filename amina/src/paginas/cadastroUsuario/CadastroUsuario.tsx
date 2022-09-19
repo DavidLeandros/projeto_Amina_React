@@ -55,7 +55,7 @@ function CadastroUsuario() {
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
         //if(confirmarSenha == user.senha){
-            cadastroUsuario('/api/Usuarios/cadastrar', user, setUserResult)
+            cadastroUsuario('/api/Usuarios/cadastrarUsuario', user, setUserResult)
             alert('Usuario cadastrado com sucesso')
             navigate("/login")
         {/*}}else{
