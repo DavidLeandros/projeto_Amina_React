@@ -1,10 +1,9 @@
 import React, { useEffect, useState, ChangeEvent } from "react"
-import { Container, Typography, TextField, Button } from "@material-ui/core"
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import useLocalStorage from "react-use-localstorage";
-import Postagem from "../../../models/Postagem";
-import { buscaId, httpPut, httpPost, busca } from "../../../services/Service";
-import './CadastroPost.css'
+
+import { buscaId, httpPost, busca } from "../../../services/Service";
+import './CadastroPost.css';
 import Grupo from "../../../models/Grupo";
 
 export interface PostDTO {
@@ -22,8 +21,8 @@ export interface PostDTO {
 
 function CadastroPost() {
     let navigate = useNavigate();
-    const [token, setToken] = useLocalStorage("token")
-    const [idUser, setIdaUser] = useLocalStorage('id')
+    const [token] = useLocalStorage("token")
+    const [idUser] = useLocalStorage('id')
 
     const [grupos, setGrupos] = useState<Grupo[]>([])
     const [grupo, setGrupo] = useState<Grupo>({
@@ -48,20 +47,26 @@ function CadastroPost() {
     })
 
     useEffect(() => {
-        getGrupos()
+
         if (token == '') {
             alert("Você precisa estar logado!")
             navigate("/login")
         }
-    }, [token])
+        getGrupos()
+        setPost({
+            ...post,
+            grupo: grupo
+         })
+    }, [token, grupo])
 
     function updatePost(e: ChangeEvent<HTMLInputElement>) {
-        console.log(post)
+        
         setPost({
             ...post,
             [e.target.name]: e.target.value,
             grupo: grupo
         })
+
     }
 
     async function getGrupos() {
@@ -105,9 +110,10 @@ function CadastroPost() {
                             'Authorization': token
                         }
                     })}>
+                    <option>Selecione Grupo</option>
                     {
                         grupos.map(item => (
-                            <option value={item.id}>{item.titulo}</option>
+                            <option value={item.id} >{item.titulo}</option>
                         ))
                     }
                 </select>
