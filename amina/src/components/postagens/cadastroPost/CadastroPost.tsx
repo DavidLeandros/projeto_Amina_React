@@ -3,89 +3,120 @@ import { Container, Typography, TextField, Button } from "@material-ui/core"
 import { useNavigate, useParams } from "react-router-dom";
 import useLocalStorage from "react-use-localstorage";
 import Postagem from "../../../models/Postagem";
-import { buscaId, httpPut, httpPost } from "../../../services/Service";
+import { buscaId, httpPut, httpPost, busca } from "../../../services/Service";
+import './CadastroPost.css'
+import Grupo from "../../../models/Grupo";
 
-function CadastroPost(){
+export interface PostDTO {
+    titulo: string;
+    topico: string;
+    descricao: string;
+    foto: string;
+    usuario: {
+        id: number;
+    },
+    grupo: {
+        id: number;
+    }
+}
+
+function CadastroPost() {
     let navigate = useNavigate();
-    const { id } = useParams<{id: string}>();
-    const [ token, setToken ] = useLocalStorage("token")
+    const [token, setToken] = useLocalStorage("token")
+    const [idUser, setIdaUser] = useLocalStorage('id')
 
-    const [post, setPost] = useState<Postagem>({
+    const [grupos, setGrupos] = useState<Grupo[]>([])
+    const [grupo, setGrupo] = useState<Grupo>({
         id: 0,
         titulo: '',
         descricao: '',
-        img: ''
+        topico: '',
+        midia: '',
+    })
+
+    const [post, setPost] = useState<PostDTO>({
+        titulo: '',
+        topico: '',
+        descricao: '',
+        foto: '',
+        usuario: {
+            id: parseInt(idUser)
+        },
+        grupo: {
+            id: grupo.id
+        }
     })
 
     useEffect(() => {
-        if(token == ''){
+        getGrupos()
+        if (token == '') {
             alert("Você precisa estar logado!")
             navigate("/login")
         }
     }, [token])
 
-    useEffect(() => {
-        if(id !== undefined){
-            findById(id)
-        }
-    }, [id])
+    function updatePost(e: ChangeEvent<HTMLInputElement>) {
+        console.log(post)
+        setPost({
+            ...post,
+            [e.target.name]: e.target.value,
+            grupo: grupo
+        })
+    }
 
-    async function findById(id: string){
-        buscaId(`/api/Postagens/idPostagem/${id}`, setPost, {
-            headers:{
+    async function getGrupos() {
+        await busca("/api/Grupos/todosGrupos", setGrupos, {
+            headers: {
                 'Authorization': token
             }
         })
     }
 
-    function updatedPostagem(e: ChangeEvent<HTMLInputElement>){
-        setPost({
-            ... post,
-            [e.target.name]: e.target.value,
-        })
-    }
-
-    async function onSubmit(e: ChangeEvent<HTMLFormElement>){
+    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
-        console.log("postagem " + JSON.stringify(post))
 
-        if(id !== undefined){
-            console.log(post)
-            httpPut(`/api/Postagens/atualizarPostagem`, post, setPost, {
-                headers:{
-                    'Authorization': token
-                }
-            })
-            alert("Postagem atualizada com sucesso!")
-        }else{
-            httpPost(`/api/Postagens/cadastrarPostagem`, post, setPost, {
-                headers:{
-                    'Authorization': token
-                }
-            })
-            alert("Postagem cadastrada com sucesso!")
-        }
+        httpPost(`/api/Postagens/cadastrarPostagem`, post, setPost, {
+            headers: {
+                'Authorization': token
+            }
+        })
+        alert("Postagem cadastrada com sucesso!")
+
         back()
     }
 
-    function back(){
-        navigate("/listaposts")
+    function back() {
+        navigate("/feed")
     }
-    
+
     return (
-        <Container maxWidth="sm" className="topo">
-            <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center">Formulário Postagem</Typography>
+        <>
+            <form onSubmit={onSubmit} id="cadastroPost">
+                <input type="text" name="titulo" id="titulo" placeholder="Titulo" onChange={(e: ChangeEvent<HTMLInputElement>) => updatePost(e)} />
+                <input type="text" name="descricao" id="descricao" placeholder="Descrição" onChange={(e: ChangeEvent<HTMLInputElement>) => updatePost(e)} />
+                <input type="text" name="topico" id="topico" placeholder="Tópico" onChange={(e: ChangeEvent<HTMLInputElement>) => updatePost(e)} />
+                <input type="text" name="foto" id="foto" placeholder="Foto" onChange={(e: ChangeEvent<HTMLInputElement>) => updatePost(e)} />
 
-                <TextField value={post.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="titulo" variant="outlined" name="titulo" margin="normal" fullWidth />
-                <TextField value={post.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
-                <TextField value={post.img} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="img" label="img" variant="outlined" name="img" margin="normal" fullWidth />
+                <select
+                    name="grupo"
+                    id="grupo"
+                    onChange={(e) => buscaId(`/api/Grupos/idGrupo/${e.target.value}`, setGrupo, {
+                        headers: {
+                            'Authorization': token
+                        }
+                    })}>
+                    {
+                        grupos.map(item => (
+                            <option value={item.id}>{item.titulo}</option>
+                        ))
+                    }
+                </select>
 
-                <Button type="submit" variant="contained" color="primary">
-                    Cadastrar
-                </Button>
+                <button type="submit">Postar</button>
             </form>
-        </Container>
+
+
+        </>
     )
 }
 

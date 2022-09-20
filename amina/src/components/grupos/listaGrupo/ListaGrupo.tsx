@@ -72,6 +72,8 @@ export default function ListaGrupo() {
                             </CardActions>
                         </Card>
                     </Box>
+
+                    
                 ))
             }
         </>

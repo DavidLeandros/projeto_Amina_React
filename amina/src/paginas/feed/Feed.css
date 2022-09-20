@@ -1,98 +1,136 @@
-.corpo{
-  height: 100vh;
-}
+
+
 .container {
   padding-top: 1.5em;
   background-color: #CEC0D5;
 }
-.containerConteudo{
+
+.containerConteudo {
   margin-top: 0.5em;
   padding: 3em;
   display: flex;
   justify-content: space-between;
 }
 
-#perfilContainer{
+#perfilContainer {
   background-color: #D9D9D9;
   display: inline-flex;
   flex-direction: column;
   width: 11em;
-  height: 25em;
+  height: 30em;
   justify-content: center;
   align-items: center;
   box-shadow: 10px 10px 8px #494747;
   border-radius: 0px 5px 5px 0px;
+
 }
-#menuPerfil{
+
+#menuPerfil {
   margin-left: 2em;
 }
-#fotoPerfilBox{
+
+#fotoPerfilBox {
   border: 1 solid black;
   margin-top: -7em;
-  
+
 }
-#fotoPerfil{
-  
-}
+
+#fotoPerfil {}
 
 
 
 
 
 /*FEED BOX */
-#feedContainer{
-    display: flex;
-    flex-direction: column;
-    width: 45em;
-    height: 35em;
-    background-color: white;
-    box-shadow: 10px 10px 8px #494747;
-    border-radius: 0px 25px 25px 0px;
-}
-#postBox{
-    height: 30%;
-    background-color: antiquewhite;
-    border-bottom:  1px solid black;
-    padding: 3em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-#inputPostBox{
-    background-color: rgb(255, 255, 255);
-    height: 5em;
-    border-radius: 15px;
-    width: 60%;
-    height: 4em;
-}
-
-#postagensBox{
-    background-color: blue;
-}
-
-
-
-
-
-
-
-
-
-/*Grupo Container */ 
-#grupoContainer{
+#feedContainer {
   display: flex;
   flex-direction: column;
-  margin-top: 5em;
-  width: 15em;
-  height: 30em;
+  width: 45em;
+
+  background-color: white;
+  box-shadow: 10px 10px 8px #494747;
+  border-radius: 0px 30px 30px 0px;
 
 }
-.grupoBox:first-child{
-    margin-bottom: 1.5em;
+
+#postBox {
+  background-color: #D9D9D9;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em;
+
+  border-top-right-radius: 30px;
 }
-.grupoBox{
-    background-color: rgb(255, 255, 255);
-    height: 15em;  
-    box-shadow: 10px 10px 8px #494747;
-    border-radius: 0px 5px 5px 0px;
+
+#contentForm input[type=checkbox] {
+  visibility: hidden;
+}
+
+#contentForm > input:checked ~ #inputPostBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20em;
+}
+
+#contentForm > input:checked ~ #inputPostBox div {
+  display: block;
+  width: 100%;
+}
+
+#inputPostBox {
+  background-color: rgb(255, 251, 251);
+
+  height: 5em;
+  border-radius: 15px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#inputPostBox:hover {
+  cursor: pointer;
+}
+
+
+
+
+
+#postagensBox {
+  border-radius: 4em;
+  margin-bottom: 5em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+
+
+/*Grupo Container */
+#grupoContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  width: 15em;
+  height: 30em;
+}
+
+.grupoBox:first-child {
+  margin-bottom: 1.5em;
+
+}
+
+.grupoBox {
+  background-color: rgb(255, 255, 255);
+  height: 15em;
+  box-shadow: 10px 10px 8px #494747;
+  border-radius: 0px 5px 5px 0px;
 }

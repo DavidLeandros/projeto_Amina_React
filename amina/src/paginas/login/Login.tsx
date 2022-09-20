@@ -10,6 +10,7 @@ import NavbarHome from '../../components/estaticos/navbar/NavbarHome'
 export default function Home() {
   const navigate = useNavigate()
   const { usuario, logarUsuario } = useContext(UsuarioContext)
+  const [token, setToken] = useLocalStorage('token')
 
   const [userLogin, setUserLogin] = useState<UserLogin>({
     id: 0,
@@ -26,10 +27,10 @@ export default function Home() {
   }
 
   useEffect(() => {
-    if (usuario && usuario.token) {
+    if (token !== '') {
       navigate('/feed')
     }
-  }, [usuario])
+  }, [token])
 
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault()
