@@ -1,5 +1,5 @@
-import { Grid, Paper } from '@material-ui/core'
 import React, { useContext } from 'react'
+import { Grid, Paper } from '@material-ui/core'
 import Navbar from '../../components/estaticos/navbar/Navbar'
 import { UsuarioContext } from '../../context/UsuarioContext'
 import { Box } from "@mui/material";
@@ -44,7 +44,7 @@ export default function Feed() {
             <main>
               <div id="feedContainer">
                 <section id="postBox">
-                  <label>{"Olá " + nameUser}</label> <br />
+                  <label>{"Olá " + nameUser}</label> <b />
                   <p>O que você está pensando?</p>
                   <label id='contentForm' htmlFor="formularioPost">
                     <input type="checkbox" name="formularioPost" id="formularioPost" />
@@ -54,7 +54,6 @@ export default function Feed() {
                       </div>
                     </div>
                   </label>
-
                 </section>
                 <section id="postagensBox">
                   <ListaPostagem />

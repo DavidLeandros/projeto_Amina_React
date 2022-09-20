@@ -1,12 +1,11 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import useLocalStorage from 'react-use-localstorage'
-import { UsuarioContext } from '../../../context/UsuarioContext'
 import './Navbar.css'
 
 export default function Navbar2() {
   const [nameUser, setNameUser] = useLocalStorage('name');
-  const { usuario } = useContext(UsuarioContext);
+
   const [token, setToken] = useLocalStorage('token');
   let navigate = useNavigate();
 

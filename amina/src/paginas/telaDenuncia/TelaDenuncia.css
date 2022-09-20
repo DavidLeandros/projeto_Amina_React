@@ -1,0 +1,34 @@
+#sobre{
+    background-color: #CEC0D5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0em;
+    width: 45%;
+}
+
+ #ImagemTitulo{
+    margin-top: -15em;
+    margin-bottom: 10em;
+ }
+
+ .btnDenuncias{
+    display: flex;
+    justify-content: center;
+ }
+
+ .denunciaBtn{
+    padding: 6px 30px;
+    margin: 5px;
+    border-radius: 5px;
+    width: 70%;
+    
+ }

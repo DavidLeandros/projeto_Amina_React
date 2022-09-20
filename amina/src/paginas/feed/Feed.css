@@ -1,5 +1,3 @@
-
-
 .container {
   padding-top: 1.5em;
   background-color: #CEC0D5;
@@ -35,8 +33,6 @@
 
 }
 
-#fotoPerfil {}
-
 
 
 
@@ -68,7 +64,7 @@
   visibility: hidden;
 }
 
-#contentForm > input:checked ~ #inputPostBox {
+#contentForm>input:checked~#inputPostBox {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,7 +72,7 @@
   height: 20em;
 }
 
-#contentForm > input:checked ~ #inputPostBox div {
+#contentForm>input:checked~#inputPostBox div {
   display: block;
   width: 100%;
 }
