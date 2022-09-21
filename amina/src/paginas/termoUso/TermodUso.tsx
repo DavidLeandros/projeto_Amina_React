@@ -14,7 +14,7 @@ export default function TermodUso() {
                         <p>
                             TERMOS DE USO — Amina
 
-                            Amina, pessoa jurídica de direito privado descreve, através deste documento, sua política de uso do [www.amina.com.br](http://www.aminatsx.com.br/) e qualquer outro site, loja ou aplicativo operado pelo proprietário.
+                            Amina, pessoa jurídica de direito privado descreve, através deste documento, sua política de uso do [www.amina.com.br] e qualquer outro site, loja ou aplicativo operado pelo proprietário.
 
                             Ao navegar neste website, você está automaticamente de acordo com nossa política. Do contrário, orientamos a que suspenda a navegação no website e evite concluir o seu cadastro.
                             A política  poderá ser editada a qualquer momento, mas, caso isso aconteça, publicaremos no website, com a data de revisão atualizada. Por outro lado, se as alterações forem substanciais, nós teremos o cuidado, além de divulgar no website, de informá-lo por meio das informações de contato que tivermos em nosso cadastro, ou por meio de notificações.
@@ -60,7 +60,7 @@ export default function TermodUso() {
 
 
                             Capítulo 9 - Contato
-                            Caso você tenha qualquer dúvida sobre esta Política de Uso, por favor, entre em contato pelo e-mail amina[@gmail.com](mailto:sixoobecan@gmail.com).<br />
+                            Caso você tenha qualquer dúvida sobre esta Política de Uso, por favor, entre em contato pelo e-mail amina[@gmail.com].<br />
 
                         </p>
                     </article>

@@ -11,7 +11,7 @@ export default function TelaDenuncia() {
                 <div id="container1">
                     <img id="ImagemTitulo" src="https://i.imgur.com/zboX1XL.png" alt="" />
 
-                    <Link to="">
+                    <Link to="./formdenuncia">
                         <button className="denunciaBtn">
                             Denunciar abuso na rede
                         </button>

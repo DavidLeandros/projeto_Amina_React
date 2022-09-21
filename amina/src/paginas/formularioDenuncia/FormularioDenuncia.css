@@ -1,0 +1,21 @@
+#fdenuncia{
+    background-color: #CEC0D5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#container2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0em;
+    width: 100%;
+}
+
+ #ImagemTitulo{
+    margin-top: -15em;
+    margin-bottom: 10em;
+ }

@@ -22,7 +22,10 @@ export default function NavbarHome() {
           <Link to="/sobre">
           <button>Sobre</button>
           </Link>
-          <button>Termos e Privacidade</button>
+
+          <Link to="/termo">
+            <button>Termos e Privacidade</button>
+          </Link>
           {
             token === ''
               ?
