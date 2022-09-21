@@ -16,13 +16,23 @@
 }
 
  #ImagemTitulo{
-    margin-bottom: 2em;
+    margin-top: -15em;
+    margin-bottom: 10em;
+ }
+    
+
+ .selectBox{
+    border-radius: 5px;
+    width: 300px;
+    height: 50px;
+    align-items: center;
  }
 
 .selectBox > option{
     color:black;
     font-size: medium;
 }
+
 .botaod {
     margin-top: 2rem;
     padding: 0.4rem;

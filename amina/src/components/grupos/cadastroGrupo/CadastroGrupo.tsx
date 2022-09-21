@@ -13,6 +13,7 @@ import {
 import useLocalStorage from 'react-use-localstorage'
 import { useNavigate } from 'react-router-dom'
 import { buscaId, httpPost, busca } from '../../../services/Service'
+import './CadastroGrupo.css'
 
 // Categoria.
 
