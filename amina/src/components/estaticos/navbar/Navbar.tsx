@@ -18,7 +18,7 @@ export default function Navbar2() {
   return (
     <>
       <nav id="menu">
-        <section>
+        <section id="navbarFeature">
           <Link to="/feed">
             <img src="https://i.imgur.com/coHfV2z.png" alt="Logo" />
           </Link>
@@ -27,9 +27,11 @@ export default function Navbar2() {
         </section>
 
         <section>
-          <img id="avatar" src="https://i.imgur.com/IpO34nE.jpg" alt="Foto" />
-          <label>{nameUser}</label>
-          <button onClick={goLogout}>Sair</button>
+          <img id="avatar" src="https://cdn-icons-png.flaticon.com/512/16/16385.png" alt="Foto" />
+          <div id="perfilNome">
+            <label>{nameUser}</label>
+          </div>
+          <button  id="sairButton" onClick={goLogout}>Sair</button>
         </section>
       </nav>
     </>
