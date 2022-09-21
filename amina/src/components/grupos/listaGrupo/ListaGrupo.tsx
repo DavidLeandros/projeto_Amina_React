@@ -26,7 +26,7 @@ export default function ListaGrupo() {
   }, [token])
 
   async function getGrupos() {
-    await busca('/api/Grupos', setGrupos, {
+    await busca('/api/Grupos/todosGrupos', setGrupos, {
       headers: {
         Authorization: token
       }

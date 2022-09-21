@@ -138,9 +138,8 @@ function CadastroPost() {
           }
         >
           <option>Selecione Grupo</option>
-          {grupos.map(item => (
-            <option value={item.id}>{item.titulo}</option>
-          ))}
+          {grupos.length > 0 &&
+            grupos.map(item => <option value={item.id}>{item.titulo}</option>)}
         </select>
 
         <button type="submit">Postar</button>

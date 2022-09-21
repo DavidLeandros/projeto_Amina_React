@@ -49,7 +49,7 @@ export default function Home() {
 
   return (
     <>
-    <NavbarHome/>
+      <NavbarHome />
       <main className="bgLogin">
         <div className="container">
           <div className="containerMenor">
@@ -90,8 +90,13 @@ export default function Home() {
               <button className="botao" type="submit" value="Entrar">
                 Entrar
               </button>
-              <p id="txt">Não tem conta? <Link to="/cadastro" className='botao2'> Cadastrar</Link> </p>
-    
+              <p id="txt">
+                Não tem conta?{' '}
+                <Link to="/cadastro" className="botao2">
+                  {' '}
+                  Cadastrar
+                </Link>{' '}
+              </p>
             </form>
           </div>
         </div>
