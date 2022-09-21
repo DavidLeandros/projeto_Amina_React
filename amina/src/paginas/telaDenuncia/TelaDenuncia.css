@@ -1,4 +1,4 @@
-#sobre{
+#denuncia{
     background-color: #CEC0D5;
     display: flex;
     align-items: center;
@@ -6,7 +6,7 @@
     height: 100vh;
 }
 
-#container{
+#container1{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,13 +22,12 @@
 
  .btnDenuncias{
     display: flex;
-    justify-content: center;
  }
 
  .denunciaBtn{
     padding: 6px 30px;
     margin: 5px;
     border-radius: 5px;
-    width: 70%;
-    
+    width: 50%;
+    align-items: center;
  }

@@ -1,0 +1,38 @@
+#fdenuncia{
+    background-color: #CEC0D5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#container2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0em;
+    width: 100%;
+}
+
+ #ImagemTitulo{
+    margin-bottom: 2em;
+ }
+
+.selectBox > option{
+    color:black;
+    font-size: medium;
+}
+.botaod {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    background-color: #EA652D;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-weight: bold;
+  }

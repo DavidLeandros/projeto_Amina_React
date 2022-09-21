@@ -62,13 +62,13 @@ function CadastroGrupo() {
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault()
 
-    await httpPost(`/api/Grupos/cadastrar`, grupo, setGrupo, {
+    await httpPost(`/api/Grupos/cadastrarGrupo`, grupo, setGrupo, {
       headers: {
         Authorization: token
       }
     })
 
-    alert('Postagem cadastrada com sucesso!')
+    alert('Grupo cadastrado com sucesso!')
 
     back()
   }
@@ -129,23 +129,6 @@ function CadastroGrupo() {
           fullWidth
           onChange={(e: ChangeEvent<HTMLInputElement>) => updateGroup(e)}
         />
-
-        <FormControl>
-          <InputLabel id="demo-simple-select-helper-label">Grupo</InputLabel>
-          <Select
-            labelId="demo-simple-select-helper-label"
-            id="demo-simple-select-helper"
-          >
-            <MenuItem value="">Titulo Grupo</MenuItem>
-            <MenuItem value="">Descrição Grupo</MenuItem>
-            <MenuItem value="">Topico Grupo</MenuItem>
-            <MenuItem value="">Midia Grupo</MenuItem>
-          </Select>
-
-          <Button type="submit" variant="contained" color="primary">
-            Cadastrar
-          </Button>
-        </FormControl>
       </form>
     </Container>
   )

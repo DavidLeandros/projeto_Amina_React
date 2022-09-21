@@ -14,6 +14,8 @@ import DeletarGrupo from '../components/grupos/deletarGrupo/DeletarGrupo'
 import DeletarPostagem from '../components/postagens/deletarPostagem/DeletarPostagem'
 import PerfilUsuario from '../paginas/perfil/PerfilUsuario'
 import TelaDenuncia from '../paginas/telaDenuncia/TelaDenuncia'
+import TermodUso from '../paginas/termoUso/TermodUso'
+import FormularioDenuncia from '../paginas/formularioDenuncia/FormularioDenuncia'
 
 export function AppRoutes() {
   // const { usuario } = useContext(UsuarioContext)
@@ -40,6 +42,8 @@ export function AppRoutes() {
         <Route path="perfil" element={<PerfilUsuario />}></Route>
 
         <Route path="denuncia" element={<TelaDenuncia />}></Route>
+        <Route path="termo" element={<TermodUso />}></Route>
+        <Route path="formdenuncia" element={<FormularioDenuncia />}></Route>
       </Routes>
     </Router>
   )

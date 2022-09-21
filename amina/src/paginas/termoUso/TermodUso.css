@@ -1,0 +1,18 @@
+#termo{
+background-color: #CEC0D5;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#container{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin-top: 20em;
+}
+
+#ImagemTitulo{
+margin-bottom: 7em;
+}
