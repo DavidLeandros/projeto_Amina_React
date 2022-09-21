@@ -7,8 +7,8 @@ export default function TelaDenuncia() {
     return (
         <>
             <Navbar />
-            <main id="sobre">
-                <div id="container">
+            <main id="denuncia">
+                <div id="container1">
                     <img id="ImagemTitulo" src="https://i.imgur.com/zboX1XL.png" alt="" />
 
                     <Link to="">
@@ -17,7 +17,7 @@ export default function TelaDenuncia() {
                         </button>
                     </Link>
 
-                    <Link to="">
+                    <Link to="ligue180@www.gov.br/mdh/pt-br">
                         <button className="denunciaBtn">
                             Denunciar abuso fora da rede
                         </button>

@@ -32,7 +32,6 @@ export default function NavbarHome() {
               :
               ''
           }
-          <button>Ajuda</button>
         </section>
 
       </nav>

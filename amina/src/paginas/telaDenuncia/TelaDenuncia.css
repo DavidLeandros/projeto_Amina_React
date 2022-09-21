@@ -1,4 +1,4 @@
-#sobre{
+#denuncia{
     background-color: #CEC0D5;
     display: flex;
     align-items: center;
@@ -6,7 +6,7 @@
     height: 100vh;
 }
 
-#container{
+#container1{
     display: flex;
     justify-content: space-between;
     align-items: center;
