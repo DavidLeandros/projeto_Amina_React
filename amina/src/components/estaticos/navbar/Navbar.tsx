@@ -4,15 +4,15 @@ import useLocalStorage from 'react-use-localstorage'
 import './Navbar.css'
 
 export default function Navbar2() {
-  const [nameUser, setNameUser] = useLocalStorage('name');
+  const [nameUser, setNameUser] = useLocalStorage('name')
 
-  const [token, setToken] = useLocalStorage('token');
-  let navigate = useNavigate();
+  const [token, setToken] = useLocalStorage('token')
+  let navigate = useNavigate()
 
-  function goLogout(){
+  function goLogout() {
     setToken('')
     setNameUser('')
-    alert("Usuário deslogado")
+    alert('Usuário deslogado')
     navigate('/')
   }
   return (
@@ -24,6 +24,7 @@ export default function Navbar2() {
           </Link>
           <button>Notificações</button>
           <button>Mensagens</button>
+          <Link to="/formularioGrupo">Grupos</Link>
         </section>
 
         <section>

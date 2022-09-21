@@ -31,13 +31,13 @@ export function AppRoutes() {
 
         <Route path="/formularioPostagem" element={<CadastroPost />} />
         <Route path="/formularioPostagem/:id" element={<CadastroPost />} />
-        <Route path="/deletarPostagem/:id" element={<DeletarPostagem />}/>
+        <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
 
         <Route path="/formularioGrupo" element={<CadastroGrupo />} />
         <Route path="/formularioGrupo/:id" element={<CadastroGrupo />} />
-        <Route path="/deletarGrupo/:id" element={<DeletarGrupo />}/>
+        <Route path="/deletarGrupo/:id" element={<DeletarGrupo />} />
 
-        <Route path='perfil' element={<PerfilUsuario />}></Route>
+        <Route path="perfil" element={<PerfilUsuario />}></Route>
 
         <Route path="denuncia" element={<TelaDenuncia />}></Route>
       </Routes>
