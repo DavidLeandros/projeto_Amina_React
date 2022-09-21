@@ -24,13 +24,13 @@ export default function Navbar2() {
           </Link>
           <button>Notificações</button>
           <button>Mensagens</button>
-          <Link to="/formularioGrupo">Grupos</Link>
+          <Link to="/formularioGrupo"><button>Grupos</button></Link>
         </section>
 
         <section>
-          <img id="avatar" src="https://cdn-icons-png.flaticon.com/512/16/16385.png" alt="Foto" />
+          <Link to='/perfil'><img id="avatar" src="https://i.imgur.com/769pZ58.png" alt="Foto" /></Link>
           <div id="perfilNome">
-            <label>{nameUser}</label>
+           <label>{nameUser}</label>
           </div>
           <button  id="sairButton" onClick={goLogout}>Sair</button>
         </section>
