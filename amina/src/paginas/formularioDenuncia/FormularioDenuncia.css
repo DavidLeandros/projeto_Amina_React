@@ -16,6 +16,9 @@
 }
 
  #ImagemTitulo{
-    margin-top: -15em;
-    margin-bottom: 10em;
+    margin-bottom: 2em;
  }
+
+.selectBox > option{
+    color:black;
+}
