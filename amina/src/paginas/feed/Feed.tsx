@@ -24,18 +24,16 @@ export default function Feed() {
 
 
             <aside id="perfilContainer">
-              <div id="fotoPerfil">
-                <div id="fotoPerfilBox">
-                  <img src="https://i.imgur.com/da6i9Eh.png" alt="" />
-                </div>
-              </div>
+                <section id="fotoPerfilBox">
+                  <img src="https://cdn-icons-png.flaticon.com/512/16/16385.png"  alt="" />
+                </section>
               <section id="menuPerfil">
                 <ul>
-                  <li>Editar Perfil</li>
-                  <li>Publicações</li>
-                  <li>Configurações</li>
-                  <li>Sair</li>
-                  <li>Denunciar Abuso</li>
+                  <li className='tagPerfil'>Editar Perfil</li> <br />
+                  <li className='tagPerfil'>Publicações</li> <br />
+                  <li className='tagPerfil'>Configurações</li> <br />
+                  <li className='tagPerfil'>Sair</li> <br />
+                  <li className='tagPerfil'>Denunciar Abuso</li>
                 </ul>
               </section>
             </aside>
@@ -44,7 +42,7 @@ export default function Feed() {
             <main>
               <div id="feedContainer">
                 <section id="postBox">
-                  <label>{"Olá " + nameUser}</label> <b />
+                  <label id='saudacao'>{"Olá " + nameUser}</label> <b />
                   <p>O que você está pensando?</p>
                   <label id='contentForm' htmlFor="formularioPost">
                     <input type="checkbox" name="formularioPost" id="formularioPost" />
@@ -56,6 +54,8 @@ export default function Feed() {
                   </label>
                 </section>
                 <section id="postagensBox">
+                  <br />
+                  <h2 id="tituloPostagem">Postagens mais recentes</h2>
                   <ListaPostagem />
                 </section>
               </div>

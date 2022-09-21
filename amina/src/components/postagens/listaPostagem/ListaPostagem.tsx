@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Button, Card, CardActions, CardContent, Typography } from "@material-ui/core";
+import { Button, Card, CardActions, CardContent, CardMedia, Typography } from "@material-ui/core";
 import './ListaPostagem.css';
-import { Box } from '@mui/material'
+import { Box, CardActionArea } from '@mui/material'
 import Postagem from "../../../models/Postagem";
 import useLocalStorage from "react-use-localstorage";
 import { busca } from "../../../services/Service";
@@ -35,7 +35,7 @@ export default function ListaPostagem() {
 
     return (
         <>
-            {
+            {/*
                 posts.map(post => (
                     <Box m={0.2}>
                         <Card variant="outlined">
@@ -76,7 +76,37 @@ export default function ListaPostagem() {
                         </Card>
                     </Box>
                 ))
-            }
+                */
+                }
+                <div id="listaPostagem">
+                {
+                    posts.map(post =>(
+                        <Box m="0.7em">
+                            <Card>
+                                <CardActionArea>
+                                    <CardMedia
+                                        component='img'
+                                        height="140"
+                                        image="https://i.imgur.com/n4v1WoJ.png"
+                                        alt=""
+                                        />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">"
+                                        {post.titulo}
+                                    </Typography>
+                                    <Typography variant="body2">
+                                        {post.descricao}
+                                    </Typography>
+                                    <Typography variant="body2">
+                                       
+                                    </Typography>
+                                </CardContent>
+                                </CardActionArea>
+                            </Card>
+                        </Box>
+                    ))
+                }
+            </div>
         </>
     )
 }
