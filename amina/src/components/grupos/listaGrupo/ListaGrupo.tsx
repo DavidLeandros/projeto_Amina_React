@@ -83,7 +83,7 @@ export default function ListaGrupo() {
                 >
                   <Box mx={1}>
                     <Button variant="contained" size="small" color="secondary">
-                      Deletar
+                      Deletar grupo
                     </Button>
                   </Box>
                 </Link>
