@@ -1,17 +1,24 @@
 #cadastroPost {
-    padding: 20px;
+    padding: 16px;
 }
 
 #cadastroPost input[type=text] {
-    background-color: rgb(182, 182, 255);
+    background-color: #A49AB9;
     width: 100%;
-    margin: 5px;
+    margin: 10px;
 }
 
 #cadastroPost button {
-    background-color: rgb(149, 248, 157);
+    background-color: #FB9A71;
     width: 100%;
     margin: 5px;
     padding: 10px;
     border-radius: 5px;
+    transition: 0.7s;
+}
+#cadastroPost button:hover {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+    background-color: #d35f2d;
 }

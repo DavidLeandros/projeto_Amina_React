@@ -8,6 +8,7 @@ import useLocalStorage from 'react-use-localstorage';
 import ListaPostagem from '../../components/postagens/listaPostagem/ListaPostagem';
 import ListaGrupo from '../../components/grupos/listaGrupo/ListaGrupo';
 import CadastroPost from '../../components/postagens/cadastroPost/CadastroPost';
+import { Link } from 'react-router-dom';
 
 export default function Feed() {
   const [nameUser, setNameUser] = useLocalStorage('name');
@@ -18,21 +19,21 @@ export default function Feed() {
       <header>
         <Navbar />
       </header>
-      <div className="corpo">
-        <main className="container">
+      
+        <main className="containerFeed">
           <div className="containerConteudo">
 
-
             <aside id="perfilContainer">
-                <section id="fotoPerfilBox">
-                  <img src="https://cdn-icons-png.flaticon.com/512/16/16385.png"  alt="" />
-                </section>
+                <Link to="/perfil">
+                  <section id="fotoPerfilBox">
+                    <img src="https://i.imgur.com/769pZ58.png"  alt="" />
+                  </section>
+                </Link>
               <section id="menuPerfil">
                 <ul>
                   <li className='tagPerfil'>Editar Perfil</li> <br />
                   <li className='tagPerfil'>Publicações</li> <br />
                   <li className='tagPerfil'>Configurações</li> <br />
-                  <li className='tagPerfil'>Sair</li> <br />
                   <li className='tagPerfil'>Denunciar Abuso</li>
                 </ul>
               </section>
@@ -42,7 +43,7 @@ export default function Feed() {
             <main>
               <div id="feedContainer">
                 <section id="postBox">
-                  <label id='saudacao'>{"Olá " + nameUser}</label> <b />
+                  <label id='saudacao'>{"Olá, " + nameUser}</label> <b />
                   <p>O que você está pensando?</p>
                   <label id='contentForm' htmlFor="formularioPost">
                     <input type="checkbox" name="formularioPost" id="formularioPost" />
@@ -75,7 +76,7 @@ export default function Feed() {
 
           </div>
         </main>
-      </div>
+      
     </>
   )
 }
