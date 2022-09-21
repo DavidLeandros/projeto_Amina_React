@@ -22,13 +22,12 @@
 
  .btnDenuncias{
     display: flex;
-    justify-content: center;
  }
 
  .denunciaBtn{
     padding: 6px 30px;
     margin: 5px;
     border-radius: 5px;
-    width: 70%;
-    
+    width: 50%;
+    align-items: center;
  }
