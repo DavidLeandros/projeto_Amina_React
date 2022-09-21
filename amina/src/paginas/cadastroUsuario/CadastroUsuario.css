@@ -39,3 +39,6 @@ section .input-campo{
   transition: all 0.3s ease;
   width: 100%;
 }
+.container{
+    margin-top: 4rem;  
+}

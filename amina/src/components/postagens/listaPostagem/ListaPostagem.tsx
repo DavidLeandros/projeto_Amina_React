@@ -22,7 +22,7 @@ export default function ListaPostagem() {
     }, [token])
 
     async function getPost() {
-        await busca("/api/Postagens/todasPostagens", setPosts, {
+        await busca("/api/Postagens/listaPostagem", setPosts, {
             headers: {
                 'Authorization': token
             }
