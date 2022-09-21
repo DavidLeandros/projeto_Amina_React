@@ -12,13 +12,19 @@ export default function FormularioDenuncia() {
                     <img id="ImagemTitulo" src="https://i.imgur.com/zboX1XL.png" alt="" />
                     <form action="#" method="get">
                         <select className="selectBox">
-                            <option value="Acho que não estou falando com outra mulher"></option>
-                            <option value="Me senti ofendida pela publicação"></option>
-                            <option value="Me senti ofendida pelo usuario"></option>
+                            <option value="1">
+                                Acho que não estou falando com outra mulher
+                            </option>
+                            <option value="2">
+                                Me senti ofendida pela publicação
+                                </option>
+                            <option value="3">
+                            Me senti ofendida pelo usuario
+                            </option>
                         </select>
-                         <button>
-
-                         </button>
+                        <button className="botaod" type="submit" value="Denunciar">
+                            Denunciar
+                        </button>
                     </form>
                 </div>
             </main>

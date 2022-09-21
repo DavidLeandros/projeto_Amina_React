@@ -21,4 +21,18 @@
 
 .selectBox > option{
     color:black;
+    font-size: medium;
 }
+.botaod {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    background-color: #EA652D;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-weight: bold;
+  }
