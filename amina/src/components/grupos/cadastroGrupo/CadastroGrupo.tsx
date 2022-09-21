@@ -129,6 +129,10 @@ function CadastroGrupo() {
           fullWidth
           onChange={(e: ChangeEvent<HTMLInputElement>) => updateGroup(e)}
         />
+
+        <Button type="submit" variant="contained" color="primary">
+          Cadastrar
+        </Button>
       </form>
     </Container>
   )
