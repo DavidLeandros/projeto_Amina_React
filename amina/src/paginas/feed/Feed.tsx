@@ -10,6 +10,7 @@ import ListaGrupo from '../../components/grupos/listaGrupo/ListaGrupo';
 import CadastroPost from '../../components/postagens/cadastroPost/CadastroPost';
 import { Link } from 'react-router-dom';
 
+
 export default function Feed() {
   const [nameUser, setNameUser] = useLocalStorage('name');
   const { usuario, logarUsuario } = useContext(UsuarioContext);
@@ -31,14 +32,19 @@ export default function Feed() {
                 </Link>
               <section id="menuPerfil">
                 <ul>
-                  <li className='tagPerfil'>Editar Perfil</li> <br />
+                  <li className='tagPerfil'>Perfil</li> <br />
                   <li className='tagPerfil'>Publicações</li> <br />
                   <li className='tagPerfil'>Configurações</li> <br />
                   <li className='tagPerfil'>Denunciar Abuso</li>
                 </ul>
               </section>
+               
             </aside>
-
+              <footer id="footerFeed">
+                  <button>Sobre</button>
+                  <button>Ajuda</button>
+                  <button>Termo e Privacidade</button>
+              </footer>
 
             <main>
               <div id="feedContainer">
@@ -53,7 +59,9 @@ export default function Feed() {
                       </div>
                     </div>
                   </label>
-                </section>
+                </section> 
+                <div className="linha"></div>
+
                 <section id="postagensBox">
                   <br />
                   <h2 id="tituloPostagem">Postagens mais recentes</h2>
