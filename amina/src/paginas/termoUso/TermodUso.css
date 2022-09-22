@@ -13,6 +13,16 @@ flex-direction: column;
 margin-top: 20em;
 }
 
-#ImagemTitulo{
-margin-bottom: 7em;
-}
+#ImagemSobre{
+    margin-bottom: 2em;
+    margin-top: 0em;
+ }
+ 
+ #containerSobre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 45%;
+    margin-top: 4em;
+ }
