@@ -1,11 +1,9 @@
-
 .containerFeed {
   margin: auto;
   padding-top: 1.5em;
-  background-color: #CEC0D5;
+  background-color: #cec0d5;
 }
 .containerConteudo {
-
   margin-top: 0.5em;
   padding: 3em;
   display: flex;
@@ -15,14 +13,14 @@
 /*Parte Perfil */
 #perfilContainer {
   position: fixed;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 11em;
   height: 30em;
-  
+
   box-shadow: 10px 10px 8px #494747;
   border-radius: 0px 5px 5px 0px;
 }
@@ -31,7 +29,7 @@
   margin-top: 2em;
   margin-left: 0.5em;
 }
-.tagPerfil{
+.tagPerfil {
   cursor: pointer;
 }
 
@@ -41,30 +39,27 @@
   margin-top: -5em;
   cursor: pointer;
 }
-#fotoPerfilBox >img {
-    width: 100%;
-    height: 100%;
-    border-radius: 16px;
+#fotoPerfilBox > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
 }
-#fotoPerfil {}
-
-
-
-
+#fotoPerfil {
+}
 
 /*FEED BOX */
 #feedContainer {
   display: flex;
   flex-direction: column;
   width: 45em;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   box-shadow: 10px 10px 8px #494747;
   border-radius: 0px 30px 30px 0px;
   margin-left: 33%;
 }
 
 #postBox {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   border-bottom: 1px solid black;
   display: flex;
   flex-direction: column;
@@ -72,11 +67,11 @@
   padding: 2em;
   border-top-right-radius: 30px;
 }
-#saudacao{
+#saudacao {
   font-weight: bold;
 }
 
-#contentForm input[type=checkbox] {
+#contentForm input[type='checkbox'] {
   visibility: hidden;
 }
 
@@ -106,11 +101,9 @@
   cursor: pointer;
 }
 
-#tituloPostagem{
+#tituloPostagem {
   margin-left: 28%;
 }
-
-
 
 #postagensBox {
   border-radius: 4em;
@@ -123,30 +116,24 @@ ul {
   margin: 0;
 }
 
-
-
-
-
-
 /*Grupo Container */
 #grupoContainer {
   display: flex;
   flex-direction: column;
   margin-top: 0;
   position: fixed;
-  margin-left: 75% ;
+  margin-left: 75%;
   width: 15em;
   height: 30em;
-}
-
-.grupoBox:first-child {
-  margin-bottom: 1.5em;
-
+  background-color: #d9d9d9;
+  box-shadow: 10px 10px 8px #494747;
+  border-radius: 0px 5px 5px 0px;
+  overflow-y: auto;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 .grupoBox {
-  background-color: #D9D9D9;
-  height: 15em;
-  box-shadow: 10px 10px 8px #494747;
-  border-radius: 0px 5px 5px 0px;
+  overflow-y: auto;
 }

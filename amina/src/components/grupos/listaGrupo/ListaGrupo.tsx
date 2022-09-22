@@ -39,59 +39,18 @@ export default function ListaGrupo() {
 
   return (
     <>
-      {grupos.map(grupo => (
-        <Box m={2}>
-          <Card variant="outlined">
-            <CardContent>
-              <Typography color="textSecondary" gutterBottom>
-                Grupo
-              </Typography>
-              <Typography variant="h4" component="h2">
-                Título: {grupo.titulo}
-              </Typography>
-              <Typography variant="h6" component="p">
-                Descricão: {grupo.descricao}
-              </Typography>
-              <Typography variant="h6" component="p">
-                Tópico: {grupo.topico}
-              </Typography>
-              <Typography variant="h6" component="p">
-                Mídia: {grupo.midia}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Box display="flex" justifyContent="center" mb={1.5}>
-                <Link
-                  to={`/formularioGrupo/${grupo.id}`}
-                  className="text-decorator-none"
-                >
-                  <Box mx={1}>
-                    <Button
-                      variant="contained"
-                      className="marginLeft"
-                      size="small"
-                      color="primary"
-                    >
-                      Atualizar
-                    </Button>
-                  </Box>
-                </Link>
-
-                <Link
-                  to={`/deletarGrupo/${grupo.id}`}
-                  className="text-decorator-none"
-                >
-                  <Box mx={1}>
-                    <Button variant="contained" size="small" color="secondary">
-                      Deletar
-                    </Button>
-                  </Box>
-                </Link>
-              </Box>
-            </CardActions>
-          </Card>
-        </Box>
-      ))}
+      <div id="cards">
+        {grupos.map(grupo => (
+          <Box m={2} style={{ borderRadius: '10%', overflow: 'hidden' }} >
+            <Card variant="outlined">
+              <CardContent id='cardContent'>
+                <Typography id='titulo' style={{fontWeight:'bold'}} >{grupo.titulo} </Typography>
+                <Typography id='descricao'>{grupo.descricao}</Typography>
+              </CardContent>
+            </Card>
+          </Box>
+        ))}
+      </div>
     </>
   )
 }
