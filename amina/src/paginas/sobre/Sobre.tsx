@@ -7,20 +7,33 @@ export default function Sobre() {
         <>
             <NavbarHome />
             <main id="sobre">
-                <div id="container">
-                    <img id="ImagemTitulo" src="https://i.imgur.com/zboX1XL.png" alt="" />
+                <div id="containerSobre">
+                    <img id="ImagemSobre" src="https://i.imgur.com/zboX1XL.png" alt="" />
                     <h2> Sobre</h2>
                     <article>
-                        <p>Somos a Amina uma rede social exclusiva para mulheres e meninas, um espaço para troca de experiências, busca de conhecimento e proteção, para assim nos fortalecer na caminhada a igualdade, assim como construir juntas um local seguro tanta para denúncias quanto para obter o suporte necessário.<br />
-
-
-                            Projeto desenvolvido durante o bootcamp da Generetion Brasil pela equipe Amina da turma 2 .NET. Utilizamos a linguagem de programação C# para criação de uma API usando a arquitetura MVC.<br />
-
-                            Usamos o banco de dados relacional MICROSOFT SQL SERVER, para o armazenamento de dados, e do Swagger, para a documentação. A tecnologia JWT para a proteção do nosso usuário e da API e o Postman para os testes de CRUD. Na estruturação e estilização do site, escolhemos utilizar HTML e CSS, empregando também as linguagens de programação JavaScript e TypeScript como complemento e a biblioteca React.<br />
-                        </p>
                         <p>
+                            Somos a Amina uma rede social exclusiva para mulheres e meninas, um espaço para troca de experiências, busca de conhecimento e proteção, para assim nos fortalecer na caminhada a igualdade, assim como construir juntas um local seguro tanta para denúncias quanto para obter o suporte necessário.
+                        </p>
+
+                        <br />
+
+                        <p>
+                            Projeto desenvolvido durante o bootcamp da Generetion Brasil pela equipe Amina da turma 2 .NET. Utilizamos a linguagem de programação C# para criação de uma API usando a arquitetura MVC.
+                        </p>
+
+                        <br />
+
+                        <p>
+                            Usamos o banco de dados relacional MICROSOFT SQL SERVER, para o armazenamento de dados, e do Swagger, para a documentação. A tecnologia JWT para a proteção do nosso usuário e da API e o Postman para os testes de CRUD. Na estruturação e estilização do site, escolhemos utilizar HTML e CSS, empregando também as linguagens de programação JavaScript e TypeScript como complemento e a biblioteca React.
+                        </p>
+
+                        <br />
+                        <br />
+
                         <h2> Equipe de Devs</h2>
-                            Sabryna D'Angelo, Samira Ixoobecan, Maria Júlia França, Rodrigo Lima, Felipe dos Santos Flor, Jean Franco, Rafael Candeias, David Leandro.</p>
+                        <p>
+                            Sabryna D'Angelo, Samira Ixoobecan, Maria Júlia França, Rodrigo Lima, Felipe dos Santos Flor, Jean Franco, Rafael Candeias, David Leandro.
+                        </p>
                     </article>
                     <section id='perfil'>
                         <div className="perfilBox">
