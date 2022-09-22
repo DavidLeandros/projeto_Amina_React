@@ -13,3 +13,68 @@
     margin-top: -15em;
     margin-bottom: 10em;
  }
+
+.containerCadastroGrupo {
+    margin: auto;
+    padding-top: 1.5em;
+    background-color: #CEC0D5;
+    height: 100vh;
+  }
+
+.containerConteudo {
+    margin-top: 0.5em;
+    padding: 3em;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #perfilContainer {
+    position: fixed;
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 11em;
+    height: 30em;
+    box-shadow: 10px 10px 8px #494747;
+    border-radius: 0px 5px 5px 0px;
+  }
+  #menuPerfil {
+    margin-top: 2em;
+    margin-left: 0.5em;
+  }
+
+  #campo-central{
+    display: flex;
+  flex-direction: column;
+  width: 45em;
+  padding: 1em;
+  background-color: #D9D9D9;
+  box-shadow: 10px 10px 8px #494747;
+  border-radius: 0px 30px 30px 0px;
+  margin-left: 200px;
+  }
+  
+  .grupoBox{
+    overflow-y: auto;
+
+  }
+  .botaoVoltar{
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      background-color: transparent;
+      cursor: pointer;
+      color: black;
+      font-size: 0.9rem;
+      font-weight: 300;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      width: 100%;
+    
+    }
+  
+    .input-campo > input{
+      margin-bottom: 1.2em;
+      background-color: #A49AB9;
+    }

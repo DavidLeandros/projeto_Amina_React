@@ -1,22 +1,11 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
-import {
-  Container,
-  Typography,
-  TextField,
-  Button,
-  Select,
-  InputLabel,
-  MenuItem,
-  FormControl,
-  FormHelperText
-} from '@material-ui/core'
 import useLocalStorage from 'react-use-localstorage'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { buscaId, httpPost, busca } from '../../../services/Service'
+import Navbar from '../../estaticos/navbar/Navbar'
 import './CadastroGrupo.css'
 
 // Categoria.
-
 // Listar grupos
 // 1. - Identificar o endpoint no back-end que exibe todos os grupos.
 // 1.1 - Salvar os dados do back-end no nosso estado e listá-los.
@@ -79,64 +68,98 @@ function CadastroGrupo() {
   }
 
   return (
-    <Container maxWidth="sm" className="topo">
-      <form onSubmit={onSubmit}>
-        <Typography
-          variant="h3"
-          color="textSecondary"
-          component="h1"
-          align="center"
-        >
-          Formulário Grupo
-        </Typography>
+    <>
+      <header>
+        <Navbar />
+      </header>
 
-        <TextField
-          value={grupo.titulo}
-          id="titulo"
-          label="titulo"
-          name="titulo"
-          variant="outlined"
-          margin="normal"
-          fullWidth
-          onChange={(e: ChangeEvent<HTMLInputElement>) => updateGroup(e)}
-        />
-        <TextField
-          value={grupo.descricao}
-          id="descricao"
-          label="descricao"
-          name="descricao"
-          variant="outlined"
-          margin="normal"
-          fullWidth
-          onChange={(e: ChangeEvent<HTMLInputElement>) => updateGroup(e)}
-        />
-        <TextField
-          value={grupo.topico}
-          id="topico"
-          label="topico"
-          name="topico"
-          variant="outlined"
-          margin="normal"
-          fullWidth
-          onChange={(e: ChangeEvent<HTMLInputElement>) => updateGroup(e)}
-        />
-        <TextField
-          value={grupo.midia}
-          id="midia"
-          label="midia"
-          name="midia"
-          variant="outlined"
-          margin="normal"
-          fullWidth
-          onChange={(e: ChangeEvent<HTMLInputElement>) => updateGroup(e)}
-        />
+      <main className="containerCadastroGrupo">
+        <div className="containerConteudo">
+          <aside id="perfilContainer">
+            <Link to="/perfil">
+              <section id="fotoPerfilBox">
+                <img src="https://i.imgur.com/769pZ58.png" alt="" />
+              </section>
+            </Link>
+            <section id="menuPerfil">
+              <ul>
+                <li className="tagPerfil">Editar Perfil</li> <br />
+                <li className="tagPerfil">Publicações</li> <br />
+                <li className="tagPerfil">Configurações</li> <br />
+                <li className="tagPerfil">Denunciar Abuso</li>
+              </ul>
+            </section>
+          </aside>
 
-        <Button type="submit" variant="contained" color="primary">
-          Cadastrar
-        </Button>
-      </form>
-    </Container>
+          <main id='campo-central'>
+            <form onSubmit={onSubmit}>
+              <div>
+                <h1 style={{textAlign:'center'}}>Criar Grupo</h1>
+                <br />
+              </div>
+              <div className="input-campo">
+                <input
+                  value={grupo.titulo}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                    updateGroup(e)
+                  }
+                  type="text"
+                  placeholder="Digite um título"
+                  name="titulo"
+                  required
+                />
+              </div>
+              <div className="input-campo">
+                <input
+                  value={grupo.descricao}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                    updateGroup(e)
+                  }
+                  type="text"
+                  placeholder="Digite uma descrição"
+                  name="descricao"
+                  required
+                />
+              </div>
+              <div className="input-campo">
+                <input
+                  value={grupo.topico}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                    updateGroup(e)
+                  }
+                  type="text"
+                  placeholder="Digite um tópico"
+                  name="topico"
+                  required
+                />
+              </div>
+              <div className="input-campo">
+                <input
+                  value={grupo.midia}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                    updateGroup(e)
+                  }
+                  type="text"
+                  placeholder="Adicione uma imagem"
+                  name="midia"
+                  required
+                />
+              </div>
+              <button className="botao" type="submit">
+                Cadastrar
+              </button>
+              <Link to='/feed'>  
+              <button className="botaoVoltar" type="button">
+                Voltar
+              </button>
+              </Link>
+            </form>
+          </main>
+        </div>
+      </main>
+    </>
   )
 }
 
 export default CadastroGrupo
+

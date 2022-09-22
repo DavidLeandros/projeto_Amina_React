@@ -5,15 +5,16 @@
     justify-content: center;
 }
 
-#container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 45%;
+#containerSobre{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 45%;
+   margin-top: 4em;
 }
  #perfil{
-    margin-top: 7em;
+    margin-top: 1em;
     margin-bottom: 2em;
     width: 100%;
  }
@@ -23,6 +24,15 @@
     justify-content: space-evenly;
  }
 
- #ImagemTitulo{
-    margin-bottom: 2em;
+ #ImagemTermos{
+   margin-bottom: 2em;
+   margin-top: 0em;
+}
+
+ p{
+   text-align: justify;
+ }
+
+ h2{
+   text-align: center;
  }
