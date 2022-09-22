@@ -64,7 +64,7 @@ export default function Feed() {
             <nav id="grupoContainer">
               <h1>Grupos</h1>  
               <div className="grupoBox">
-                <ListaGrupo/>
+                {/*<ListaGrupo/>*/}
               </div>
             </nav>
           </div>

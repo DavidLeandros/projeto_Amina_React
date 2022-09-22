@@ -1,6 +1,19 @@
 .topo{
     margin-top: 20px;
 }
+#fgrupo{
+    background-color: #CEC0D5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#ImagemTitulo{
+    margin-top: -15em;
+    margin-bottom: 10em;
+ }
+
 .containerCadastroGrupo {
     margin: auto;
     padding-top: 1.5em;

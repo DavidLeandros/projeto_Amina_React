@@ -48,12 +48,12 @@
 }
 
 #menu section #avatar {
-  border: 2px solid white;
+  border: 1px solid white;
 }
 
 #avatar{
-  height: 2em;
-  width: 3em;
+  height: 2.5em;
+  width: 9em;
   margin-left: -2em;
   margin-right: 2em;
 }
