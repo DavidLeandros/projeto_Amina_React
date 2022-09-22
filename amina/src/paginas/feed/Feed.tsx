@@ -1,8 +1,6 @@
 import React, { useContext } from 'react'
-import { Grid, Paper } from '@material-ui/core'
 import Navbar from '../../components/estaticos/navbar/Navbar'
 import { UsuarioContext } from '../../context/UsuarioContext'
-import { Box } from "@mui/material";
 import './Feed.css'
 import useLocalStorage from 'react-use-localstorage';
 import ListaPostagem from '../../components/postagens/listaPostagem/ListaPostagem';
@@ -64,16 +62,11 @@ export default function Feed() {
 
 
             <nav id="grupoContainer">
+              <h1>Grupos</h1>  
               <div className="grupoBox">
                 <ListaGrupo/>
               </div>
-              <div className='grupoBox'>
-              </div>
             </nav>
-
-
-
-
           </div>
         </main>
       
