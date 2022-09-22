@@ -95,9 +95,9 @@ function CadastroGrupo() {
             <form onSubmit={onSubmit}>
               <div>
                 <h1 style={{textAlign:'center'}}>Criar Grupo</h1>
+                <br />
               </div>
               <div className="input-campo">
-                <label htmlFor="">Titulo</label>
                 <input
                   value={grupo.titulo}
                   onChange={(e: ChangeEvent<HTMLInputElement>) =>
@@ -110,7 +110,6 @@ function CadastroGrupo() {
                 />
               </div>
               <div className="input-campo">
-                <label htmlFor="">Descrição</label>
                 <input
                   value={grupo.descricao}
                   onChange={(e: ChangeEvent<HTMLInputElement>) =>
@@ -123,7 +122,6 @@ function CadastroGrupo() {
                 />
               </div>
               <div className="input-campo">
-                <label htmlFor="">Tópico</label>
                 <input
                   value={grupo.topico}
                   onChange={(e: ChangeEvent<HTMLInputElement>) =>
@@ -136,7 +134,6 @@ function CadastroGrupo() {
                 />
               </div>
               <div className="input-campo">
-                <label htmlFor="">Mídia</label>
                 <input
                   value={grupo.midia}
                   onChange={(e: ChangeEvent<HTMLInputElement>) =>
