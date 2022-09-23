@@ -9,7 +9,7 @@ export default function FormularioDenuncia() {
             <Navbar />
             <main id="fdenuncia">
                 <div>
-                    <img id="ImagemTitulo" src="https://i.imgur.com/zboX1XL.png" alt="" />
+                    <img id="ImagemDenuncia" src="https://i.imgur.com/zboX1XL.png" alt="" />
                     <form action="#" method="get">
                         <select className="selectBox">
                             <option value="1">

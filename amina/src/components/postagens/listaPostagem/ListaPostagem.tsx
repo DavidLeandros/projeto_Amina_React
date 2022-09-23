@@ -39,6 +39,7 @@ export default function ListaPostagem() {
     getPost()
   }, [posts.length])
 
+
   return (
     <>
       {/*
@@ -97,6 +98,7 @@ export default function ListaPostagem() {
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
+                      
                       {post.titulo}
                     </Typography>
                     <Typography variant="body2">{post.descricao}</Typography>
