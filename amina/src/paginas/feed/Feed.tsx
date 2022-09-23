@@ -30,10 +30,18 @@ export default function Feed() {
                 </Link>
               <section id="menuPerfil">
                 <ul>
-                  <li className='tagPerfil'>Perfil</li> <br />
+                  <Link to="/perfil">
+                    <li className='tagPerfil'>Perfil</li>
+                  </Link>
+                   <br />
                   <li className='tagPerfil'>Publicações</li> <br />
                   <li className='tagPerfil'>Configurações</li> <br />
-                  <li className='tagPerfil'>Denunciar Abuso</li>
+                  
+                  <Link to="/denuncia">
+                    <li className='tagPerfil'>Denunciar Abuso</li>
+                  </Link>
+
+                  
                 </ul>
               </section>
                

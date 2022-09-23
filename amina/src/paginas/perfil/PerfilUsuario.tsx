@@ -22,7 +22,7 @@ export default function PerfilUsuario() {
                 </section>
               <section id="menuPerfil">
                 <ul>
-                  <li className='tagPerfil'>Perfil</li> <br />
+                  <li className='tagPerfil'>Feed</li> <br />
                   <li className='tagPerfil'>Configurações</li> <br />
                   <li className='tagPerfil'>Email: </li>
                 </ul>
@@ -59,12 +59,6 @@ export default function PerfilUsuario() {
               </section>
             </div>
           </main>
-
-          <nav id="grupoContainer">
-            <div className="grupoBox"></div>
-
-            <div className='grupoBox'></div>
-          </nav>
         </div>
       </main>
     </>
