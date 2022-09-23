@@ -33,3 +33,8 @@
     height: 50px;
     align-items: center;
  }
+
+ .denunciaBtn > a {
+   text-decoration: none;
+   color: black;
+ }

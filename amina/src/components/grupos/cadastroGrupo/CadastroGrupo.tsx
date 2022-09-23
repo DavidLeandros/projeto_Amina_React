@@ -86,7 +86,10 @@ function CadastroGrupo() {
                 <li className="tagPerfil">Editar Perfil</li> <br />
                 <li className="tagPerfil">Publicações</li> <br />
                 <li className="tagPerfil">Configurações</li> <br />
-                <li className="tagPerfil">Denunciar Abuso</li>
+                <Link to="/denuncia">
+                  <li className="tagPerfil">Denunciar Abuso</li>
+                </Link>
+                
               </ul>
             </section>
           </aside>
@@ -104,7 +107,7 @@ function CadastroGrupo() {
                     updateGroup(e)
                   }
                   type="text"
-                  placeholder="Digite um título"
+                  placeholder="Título"
                   name="titulo"
                   required
                 />
@@ -116,7 +119,7 @@ function CadastroGrupo() {
                     updateGroup(e)
                   }
                   type="text"
-                  placeholder="Digite uma descrição"
+                  placeholder="Descrição"
                   name="descricao"
                   required
                 />
@@ -128,7 +131,7 @@ function CadastroGrupo() {
                     updateGroup(e)
                   }
                   type="text"
-                  placeholder="Digite um tópico"
+                  placeholder="Tópico"
                   name="topico"
                   required
                 />
@@ -140,7 +143,7 @@ function CadastroGrupo() {
                     updateGroup(e)
                   }
                   type="text"
-                  placeholder="Adicione uma imagem"
+                  placeholder="URL Imagem"
                   name="midia"
                   required
                 />

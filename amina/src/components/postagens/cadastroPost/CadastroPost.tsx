@@ -112,17 +112,9 @@ function CadastroPost() {
 
         <input
           type="text"
-          name="topico"
-          id="topico"
-          placeholder="Tópico"
-          onChange={(e: ChangeEvent<HTMLInputElement>) => updatePost(e)}
-        />
-
-        <input
-          type="text"
           name="foto"
           id="foto"
-          placeholder="Foto"
+          placeholder="URL Imagem"
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatePost(e)}
         />
 

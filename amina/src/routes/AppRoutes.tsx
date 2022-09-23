@@ -39,11 +39,11 @@ export function AppRoutes() {
         <Route path="/formularioGrupo/:id" element={<CadastroGrupo />} />
         <Route path="/deletarGrupo/:id" element={<DeletarGrupo />} />
 
-        <Route path="perfil" element={<PerfilUsuario />}></Route>
+        <Route path="/perfil" element={<PerfilUsuario />}></Route>
 
-        <Route path="denuncia" element={<TelaDenuncia />}></Route>
-        <Route path="termo" element={<TermodUso />}></Route>
-        <Route path="formdenuncia" element={<FormularioDenuncia />}></Route>
+        <Route path="/denuncia" element={<TelaDenuncia />}></Route>
+        <Route path="/termo" element={<TermodUso />}></Route>
+        <Route path="/formdenuncia" element={<FormularioDenuncia />}></Route>
       </Routes>
     </Router>
   )
