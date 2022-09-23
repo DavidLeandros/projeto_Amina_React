@@ -39,50 +39,9 @@ export default function ListaPostagem() {
     getPost()
   }, [posts.length])
 
+
   return (
     <>
-      {/*
-                posts.map(post => (
-                    <Box m={0.2}>
-                        <Card variant="outlined">
-                            <CardContent>
-                                <Typography color="textSecondary" gutterBottom>
-                                    Postagem
-                                </Typography>
-                                <Typography variant="h4" component="h2">
-                                    {post.titulo}
-                                </Typography>
-                                <Typography variant="h6" component="p">
-                                    {post.descricao}
-                                </Typography>
-                                <Typography variant="h6" component="p">
-                                    {post.foto}
-                                </Typography>
-                            </CardContent>
-                            <CardActions>
-                                <Box display="flex" justifyContent="center" mb={1.5}>
-
-                                    <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none">
-                                        <Box mx={1}>
-                                            <Button variant="contained" className="marginLeft" size="small" color="primary">
-                                                Atualizar
-                                            </Button>
-                                        </Box>
-                                    </Link>
-
-                                    <Link to={`/deletarPostagem/${post.id}`} className="text-decorator-none">
-                                        <Box mx={1}>
-                                            <Button variant="contained" size="small" color="secondary">
-                                                Deletar
-                                            </Button>
-                                        </Box>
-                                    </Link>
-                                </Box>
-                            </CardActions>
-                        </Card>
-                    </Box>
-                ))
-                */}
       <div id="listaPostagem">
         {posts.length > 0 &&
           posts.map(post => (
@@ -97,6 +56,7 @@ export default function ListaPostagem() {
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
+                      
                       {post.titulo}
                     </Typography>
                     <Typography variant="body2">{post.descricao}</Typography>

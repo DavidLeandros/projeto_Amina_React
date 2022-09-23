@@ -9,7 +9,7 @@ export default function TelaDenuncia() {
             <Navbar />
             <main id="denuncia">
                 <div id="container1">
-                    <img id="ImagemTitulo" src="https://i.imgur.com/zboX1XL.png" alt="" />
+                    <img id="ImagemDenuncia" src="https://i.imgur.com/zboX1XL.png" alt="" />
 
                     <Link to="/formdenuncia">
                         <button className="denunciaBtn">

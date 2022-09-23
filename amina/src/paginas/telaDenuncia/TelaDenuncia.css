@@ -16,10 +16,6 @@
     width: 100%;
 }
 
- #ImagemTitulo{
-    margin-top: -15em;
-    margin-bottom: 10em;
- }
 
  .btnDenuncias{
     display: flex;
@@ -37,4 +33,9 @@
  .denunciaBtn > a {
    text-decoration: none;
    color: black;
+ }
+
+ #ImagemDenuncia{
+   margin-top: -8em;
+   margin-bottom: 10em;
  }
