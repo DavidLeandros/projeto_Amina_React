@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import useLocalStorage from 'react-use-localstorage'
 import './Navbar.css'
 
-export default function Navbar2() {
+export default function Navbar() {
   const [nameUser, setNameUser] = useLocalStorage('name')
 
   const [token, setToken] = useLocalStorage('token')
