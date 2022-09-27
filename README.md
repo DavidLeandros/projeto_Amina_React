@@ -12,5 +12,7 @@ Projeto desenvolvido durante o Bootcamp Generetion Brasil, em que pensando no Ob
   <a href="https://imgur.com/zF0xTGe"><img src="https://i.imgur.com/zF0xTGe.png" title="source: imgur.com" /></a>
   <a href="https://imgur.com/YykLGfM"><img src="https://i.imgur.com/YykLGfM.png" title="source: imgur.com" /></a>
 
+  # Aprendizados
+  
 
 
