@@ -1,17 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage'
+import useLocalStorage from 'react-use-localstorage';
 import Navbar from '../../components/estaticos/navbar/Navbar';
 import ListaGrupo from '../../components/grupos/listaGrupo/ListaGrupo';
+import CadastroPost from '../../components/postagens/cadastroPost/CadastroPost';
 import ListaPostagem from '../../components/postagens/listaPostagem/ListaPostagem';
-import './PerfilUsuario.css'
-<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'></link>
-export default function PerfilUsuario() {
-  
-  const[nameUser, setNameUser] = useLocalStorage('name');
-  return (
-    <>
-      <header>
+
+
+
+
+export default function Grupo(){
+
+  const [nameUser, setNameUser] = useLocalStorage('name');
+
+    return(
+        <>
+        <header>
         <Navbar />
       </header>
 
@@ -42,17 +46,15 @@ export default function PerfilUsuario() {
           <main>
             <div id="feedContainer">
                  
-            <img className="muralPerfil" src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2020/07/23/tulipa-flor-roxa-pinteres.jpg" alt="" />
+            <img className="muralPerfil" src="https://blog.juriscorrespondente.com.br/wp-content/uploads/2019/03/mlheres-2-1024x512.jpg" alt="" />
               <section id="postBox"> 
 
-                <label id="saudacao">{nameUser}</label> 
+                <label id="saudacao">GRUPO TESTE 1</label> 
                 <br />
                   <ul>
-                    <li>Email: samira@gmail.com</li>
-                    <li>Hobbies:</li>
-                    <li>Idade: 29 anos</li>
+                    <li>Tópico:</li>
                   </ul> <br />
-                  <h4>Sobre</h4> <br />
+                  <h4>Sobre o Grupo</h4> <br />
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis cupiditate ullam amet perferendis pariatur magni cumque, velit dolor ab deleniti consequuntur quae nobis similique itaque, iure adipisci facere laboriosam dolorem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis consectetur iure ducimus voluptates error dignissimos ex. Hic et perspiciatis eveniet maiores architecto iure mollitia quae, eligendi ratione dicta repellendus optio?</p>
                   <div className="linha"></div>
               </section>
@@ -73,6 +75,7 @@ export default function PerfilUsuario() {
             </nav>
           </div>
         </main>
-    </>
-  )
+      
+        </>
+    )
 }
