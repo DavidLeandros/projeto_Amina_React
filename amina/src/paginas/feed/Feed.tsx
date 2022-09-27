@@ -39,9 +39,13 @@ export default function Feed() {
                
             </aside>
               <footer id="footerFeed">
+              <Link to="/sobre">
                   <button>Sobre</button>
+                  </Link>
                   <button>Ajuda</button>
+                  <Link to="/termo">
                   <button>Termo e Privacidade</button>
+                  </Link>
               </footer>
 
             <main>

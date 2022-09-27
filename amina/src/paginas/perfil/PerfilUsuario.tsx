@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage'
 import Navbar from '../../components/estaticos/navbar/Navbar';
 import ListaPostagem from '../../components/postagens/listaPostagem/ListaPostagem';
@@ -29,11 +30,14 @@ export default function PerfilUsuario() {
               </section>
             </aside>
             <footer id="footerFeed">
+              <Link to="/sobre">
                   <button>Sobre</button>
+                  </Link>
                   <button>Ajuda</button>
+                  <Link to="/termo">
                   <button>Termo e Privacidade</button>
+                  </Link>
               </footer>
-
           <main>
             <div id="feedContainer">
                  

@@ -16,6 +16,7 @@ import PerfilUsuario from '../paginas/perfil/PerfilUsuario'
 import TelaDenuncia from '../paginas/telaDenuncia/TelaDenuncia'
 import TermodUso from '../paginas/termoUso/TermodUso'
 import FormularioDenuncia from '../paginas/formularioDenuncia/FormularioDenuncia'
+import Grupos from '../paginas/grupos/Grupos'
 
 export function AppRoutes() {
   // const { usuario } = useContext(UsuarioContext)
@@ -30,6 +31,7 @@ export function AppRoutes() {
         <Route path="/feed" element={<Feed />} />
         <Route path="/listaposts" element={<ListaPostagem />} />
         <Route path="/listagrupos" element={<ListaGrupo />} />
+        <Route path="/grupos/:id" element={<Grupos />}/>
 
         <Route path="/formularioPostagem" element={<CadastroPost />} />
         <Route path="/formularioPostagem/:id" element={<CadastroPost />} />
