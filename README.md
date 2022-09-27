@@ -1,2 +1,2 @@
-# projeto_Amina_React
-<img src="https://media.discordapp.net/attachments/1006617180059730032/1020310953570607144/Tela_de_home.png?width=600&height=427">
+<a href="https://imgur.com/O8S0caU"><img src="https://i.imgur.com/O8S0caU.png" title="source: imgur.com" /></a>
+
