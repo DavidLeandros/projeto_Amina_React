@@ -6,11 +6,11 @@ import { useNavigate, useParams } from "react-router-dom";
 import useLocalStorage from "react-use-localstorage";
 import Postagem from "../../../models/Postagem";
 
-function DeletarTema(){
+function DeletarPostagem(){
     let navigate = useNavigate();
     const { id } = useParams<{id: string}>();
     const [ token, setToken ] = useLocalStorage("token")
-    const [post, setPost] = useState<Postagem>()
+    const [ post, setPosts ] = useState<Postagem>()
 
     useEffect(() => {
         if(token == ''){
@@ -26,7 +26,7 @@ function DeletarTema(){
     }, [id])
 
     async function findById(id: string){
-        buscaId(`/api/Postagens/idPostagem/${id}`, setPost, {
+        buscaId(`/api/Postagens/idPostagem/${id}`, setPosts, {
             headers:{
                 'Authorization': token
             }
@@ -57,13 +57,13 @@ function DeletarTema(){
                                 Deseja deletar a Postagem:
                             </Typography>
                             <Typography color="textSecondary">
-                                <strong>Título</strong> {post?.titulo}
+                                <strong>Título:</strong> {post?.titulo}
                             </Typography>
                             <Typography color="textSecondary">
-                                <strong>Descrição</strong>: {post?.descricao}
+                                <strong>Descrição:</strong> {post?.descricao}
                             </Typography>
                             <Typography color="textSecondary">
-                                <strong>URL Foto</strong>: {post?.foto}
+                                <strong>URL Foto:</strong> {post?.foto}
                             </Typography>
                         </Box>
                     </CardContent>
@@ -84,7 +84,7 @@ function DeletarTema(){
                 </Card>
             </Box>
         </>
-    )
+    );
 }
 
-export default DeletarTema;
+export default DeletarPostagem;

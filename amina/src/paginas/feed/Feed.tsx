@@ -40,11 +40,10 @@ export default function Feed() {
                   <Link to="/denuncia">
                     <li className='tagPerfil'>Denunciar Abuso</li>
                   </Link>
-
-                  
+                
+                
                 </ul>
-              </section>
-               
+              </section> 
             </aside>
               <footer id="footerFeed">
               <Link to="/sobre">

@@ -83,7 +83,7 @@ function CadastroGrupo() {
             </Link>
             <section id="menuPerfil">
               <ul>
-                <li className="tagPerfil">Editar Perfil</li> <br />
+                <li className="tagPerfil">Perfil</li> <br />
                 <li className="tagPerfil">Publicações</li> <br />
                 <li className="tagPerfil">Configurações</li> <br />
                 <Link to="/denuncia">
