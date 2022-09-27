@@ -12,6 +12,7 @@ import {
 import Grupo from '../../../models/Grupo'
 import useLocalStorage from 'react-use-localstorage'
 import { busca } from '../../../services/Service'
+import { idText } from 'typescript'
 
 export default function ListaGrupo() {
   const [grupos, setGrupos] = useState<Grupo[]>([])
@@ -41,12 +42,16 @@ export default function ListaGrupo() {
     <>
       <div id="cards">
         {grupos.map(grupo => (
-          <Box m={2} style={{ borderRadius: '10%', overflow: 'hidden' }} >
+          <Box m={2} style={{ borderRadius: '10%', overflow: 'hidden' }}>
             <Card variant="outlined">
-              <CardContent id='cardContent'>
-                <Typography id='titulo' style={{fontWeight:'bold'}} >{grupo.titulo} </Typography>
-                <Typography id='descricao'>{grupo.descricao}</Typography>
-              </CardContent>
+              <Link to={`/grupos/${grupo.id}`}>
+                <CardContent id="cardContent">
+                  <Typography id="titulo" style={{ fontWeight: 'bold' }}>
+                    {grupo.titulo}{' '}
+                  </Typography>
+                  <Typography id="descricao">{grupo.descricao}</Typography>
+                </CardContent>
+              </Link>
             </Card>
           </Box>
         ))}

@@ -44,7 +44,7 @@ export default function ListaPostagem() {
       <div id="listaPostagem">
         {posts.length > 0 &&
           posts.map(post => (
-            <Box m="0.7em">
+            <Box m="0.7em" key={post.id}>
               <Card>
                 <CardActionArea>
                   <CardMedia
