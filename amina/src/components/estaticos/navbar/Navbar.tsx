@@ -22,8 +22,6 @@ export default function Navbar2() {
           <Link to="/feed">
             <img src="https://i.imgur.com/coHfV2z.png" alt="Logo" />
           </Link>
-          <button>Notificações</button>
-          <button>Mensagens</button>
           <Link to="/formularioGrupo"><button>Grupos</button></Link>
         </section>
 

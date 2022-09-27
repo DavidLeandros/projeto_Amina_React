@@ -34,7 +34,7 @@ function DeletarTema(){
     }
 
     function sim(){
-        navigate("/listaposts")
+        navigate("/feed")
         deleteId(`/api/Postagens/idPostagem/${id}`, {
             headers:{
                 'Authorization': token
@@ -44,7 +44,7 @@ function DeletarTema(){
     }
 
     function nao(){
-        navigate("/listaposts")
+        navigate("/feed")
     }
 
     return(
@@ -57,13 +57,13 @@ function DeletarTema(){
                                 Deseja deletar a Postagem:
                             </Typography>
                             <Typography color="textSecondary">
-                                {post?.titulo}
+                                <strong>Título</strong> {post?.titulo}
                             </Typography>
                             <Typography color="textSecondary">
-                                {post?.descricao}
+                                <strong>Descrição</strong>: {post?.descricao}
                             </Typography>
                             <Typography color="textSecondary">
-                                {post?.foto}
+                                <strong>URL Foto</strong>: {post?.foto}
                             </Typography>
                         </Box>
                     </CardContent>

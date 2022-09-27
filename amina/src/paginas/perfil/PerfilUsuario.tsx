@@ -23,7 +23,7 @@ export default function PerfilUsuario() {
                 </section>
               <section id="menuPerfil">
                 <ul>
-                  <li className='tagPerfil'>Perfil</li> <br />
+                  <li className='tagPerfil'>Feed</li> <br />
                   <li className='tagPerfil'>Configurações</li> <br />
                   <li className='tagPerfil'>Email: </li>
                 </ul>
@@ -48,11 +48,13 @@ export default function PerfilUsuario() {
                 <br />
                   <ul>
                     <li>Email: samira@gmail.com</li>
-                    <li>Hobbies:</li>
+                    <li>Hobbies: Leitura e caminhadas</li>
                     <li>Idade: 29 anos</li>
                   </ul> <br />
                   <h4>Sobre</h4> <br />
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis cupiditate ullam amet perferendis pariatur magni cumque, velit dolor ab deleniti consequuntur quae nobis similique itaque, iure adipisci facere laboriosam dolorem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis consectetur iure ducimus voluptates error dignissimos ex. Hic et perspiciatis eveniet maiores architecto iure mollitia quae, eligendi ratione dicta repellendus optio?</p>
+                  <p>
+                    Olá Me chamo Samira moro em São paulo a 10 meses e adoraria conhecer mais sobre a cidade e a comunidade feminina aqui. “O início da sabedoria é a admissão da própria ignorância. Todo o meu saber consiste em saber que nada sei.
+                  </p>
                   <div className="linha"></div>
               </section>
              
@@ -63,12 +65,6 @@ export default function PerfilUsuario() {
               </section>
             </div>
           </main>
-
-          <nav id="grupoContainer">
-            <div className="grupoBox"></div>
-
-            <div className='grupoBox'></div>
-          </nav>
         </div>
       </main>
     </>

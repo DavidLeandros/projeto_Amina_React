@@ -1,8 +1,8 @@
 import React, { useEffect, useState, ChangeEvent } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import useLocalStorage from 'react-use-localstorage'
 
-import { buscaId, httpPost, busca } from '../../../services/Service'
+import { buscaId, httpPost, busca, httpPut } from '../../../services/Service'
 import './CadastroPost.css'
 import Grupo from '../../../models/Grupo'
 
@@ -24,6 +24,7 @@ function CadastroPost() {
   const [token] = useLocalStorage('token')
   const [idUser] = useLocalStorage('id')
 
+  const { id } = useParams<{ id: string }>();
   const [grupos, setGrupos] = useState<Grupo[]>([])
   const [grupo, setGrupo] = useState<Grupo>({
     id: 0,
@@ -58,6 +59,20 @@ function CadastroPost() {
     })
   }, [token, grupo])
 
+  useEffect(() => {
+    if (id !== undefined) {
+      findById(id)
+    }
+  }, [id])
+
+  async function findById(id: string) {
+    buscaId(`/api/Postagens/idPostagem/${id}`, setPost, {
+      headers: {
+        'Authorization': token
+      }
+    })
+  }
+
   function updatePost(e: ChangeEvent<HTMLInputElement>) {
     setPost({
       ...post,
@@ -69,7 +84,7 @@ function CadastroPost() {
   async function getGrupos() {
     await busca('/api/Grupos/todosGrupos', setGrupos, {
       headers: {
-        Authorization: token
+        "Authorization": token
       }
     })
   }
@@ -77,12 +92,27 @@ function CadastroPost() {
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault()
 
-    httpPost(`/api/Postagens/cadastrarPostagem`, post, setPost, {
+    if(id !== undefined){
+      httpPut(`/api/Postagens/atualizarPostagem`, post, setPost, {
+        headers:{
+          "Authorization": token
+        }
+      })
+      alert('Postagem atualizada com sucesso!')
+    }else{
+      httpPost(`/api/Postagens/cadastrarPostagem`, post, setPost, {
+        headers: {
+          Authorization: token
+        }
+      })
+      alert('Postagem cadastrada com sucesso!')
+    }
+
+    {/*httpPost(`/api/Postagens/cadastrarPostagem`, post, setPost, {
       headers: {
         Authorization: token
       }
-    })
-    alert('Postagem cadastrada com sucesso!')
+    })*/}
 
     back()
   }
@@ -112,17 +142,9 @@ function CadastroPost() {
 
         <input
           type="text"
-          name="topico"
-          id="topico"
-          placeholder="Tópico"
-          onChange={(e: ChangeEvent<HTMLInputElement>) => updatePost(e)}
-        />
-
-        <input
-          type="text"
           name="foto"
           id="foto"
-          placeholder="Foto"
+          placeholder="URL Imagem"
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatePost(e)}
         />
 
