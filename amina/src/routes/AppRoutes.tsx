@@ -32,9 +32,9 @@ export function AppRoutes() {
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<CadastroUsuario />} />
         <Route path="/feed" element={<Feed />} />
-        <Route path='/grupo' element={<Grupo />} />
         <Route path="/listaposts" element={<ListaPostagem />} />
         <Route path="/listagrupos" element={<ListaGrupo />} />
+        <Route path="/grupos/:id" element={<Grupos />}/>
 
         <Route path="/formularioPostagem" element={<AtualizarPostagem/>} />
         <Route path="/formularioPostagem/:id" element={<AtualizarPostagem />} />

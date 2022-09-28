@@ -34,11 +34,14 @@ export default function PerfilUsuario() {
               </section>
             </aside>
             <footer id="footerFeed">
+              <Link to="/sobre">
                   <button>Sobre</button>
+                  </Link>
                   <button>Ajuda</button>
+                  <Link to="/termo">
                   <button>Termo e Privacidade</button>
+                  </Link>
               </footer>
-
           <main>
             <div id="feedContainer">
                  
