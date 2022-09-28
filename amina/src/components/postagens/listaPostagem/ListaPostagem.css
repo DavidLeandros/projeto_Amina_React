@@ -4,3 +4,7 @@
 #listaPostagem{
     margin-bottom: 1em;
 }
+.caixaPostagemBotoes{
+    display: flex;
+    justify-content: space-between;
+}

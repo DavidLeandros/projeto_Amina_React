@@ -15,6 +15,7 @@
     padding: 10px;
     border-radius: 5px;
     transition: 0.7s;
+    cursor: pointer;
 }
 #cadastroPost button:hover {
     font-size: 17px;
@@ -22,3 +23,11 @@
     letter-spacing: 0.7px;
     background-color: #d35f2d;
 }
+
+.opcoes{
+    background-color: #A49AB9;
+}
+
+.conteudoCadastroPost{
+    margin-left: -0.8em;
+  }

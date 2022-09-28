@@ -30,14 +30,14 @@ export default function Feed() {
                 </Link>
               <section id="menuPerfil">
                 <ul>
-                  <Link to="/perfil">
+                  <Link to="/perfil" style={{ textDecoration: 'none' }}>
                     <li className='tagPerfil'>Perfil</li>
                   </Link>
                    <br />
                   <li className='tagPerfil'>Publicações</li> <br />
                   <li className='tagPerfil'>Configurações</li> <br />
                   
-                  <Link to="/denuncia">
+                  <Link to="/denuncia" style={{ textDecoration: 'none' }}>
                     <li className='tagPerfil'>Denunciar Abuso</li>
                   </Link>
                 

@@ -11,6 +11,7 @@ import ListaPostagem from '../../components/postagens/listaPostagem/ListaPostage
 
 export default function Grupo(){
 
+  
   const [nameUser, setNameUser] = useLocalStorage('name');
 
     return(
@@ -46,7 +47,7 @@ export default function Grupo(){
           <main>
             <div id="feedContainer">
                  
-            <img className="muralPerfil" src="https://blog.juriscorrespondente.com.br/wp-content/uploads/2019/03/mlheres-2-1024x512.jpg" alt="" />
+            <img className="muralPerfil" src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2020/07/23/tulipa-flor-roxa-pinteres.jpg" alt="" />
               <section id="postBox"> 
 
                 <label id="saudacao">GRUPO TESTE 1</label> 

@@ -89,15 +89,20 @@ function CadastroGrupo() {
                 <Link to="/denuncia">
                   <li className="tagPerfil">Denunciar Abuso</li>
                 </Link>
-                
               </ul>
             </section>
           </aside>
 
+          <footer id="footerFeed">
+            <button>Sobre</button>
+            <button>Ajuda</button>
+            <button>Termo e Privacidade</button>
+          </footer>
+
           <main id='campo-central'>
             <form onSubmit={onSubmit}>
               <div>
-                <h1 style={{textAlign:'center'}}>Criar Grupo</h1>
+                <h1 style={{ textAlign: 'center' }}>Criar Grupo</h1>
                 <br />
               </div>
               <div className="input-campo">
@@ -151,10 +156,10 @@ function CadastroGrupo() {
               <button className="botao" type="submit">
                 Cadastrar
               </button>
-              <Link to='/feed'>  
-              <button className="botaoVoltar" type="button">
-                Voltar
-              </button>
+              <Link to='/feed'>
+                <button className="botaoVoltar" type="button">
+                  Voltar
+                </button>
               </Link>
             </form>
           </main>
