@@ -86,7 +86,7 @@ function CadastroGrupo() {
                 <li className="tagPerfil">Perfil</li> <br />
                 <li className="tagPerfil">Publicações</li> <br />
                 <li className="tagPerfil">Configurações</li> <br />
-                <Link to="/denuncia">
+                <Link to="/denuncia" style={{ textDecoration: 'none' }}>
                   <li className="tagPerfil">Denunciar Abuso</li>
                 </Link>
               </ul>

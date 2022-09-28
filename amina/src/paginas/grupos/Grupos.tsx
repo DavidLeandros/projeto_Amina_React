@@ -97,7 +97,6 @@ export default function Grupos() {
               <section id="postBox">
                 <label id="saudacao">{grupo?.titulo}</label>
                 <br />
-                <br />
                 <h4>Sobre nós</h4> <br />
                 <p>{grupo?.descricao}</p>
                 <div className="linha"></div>

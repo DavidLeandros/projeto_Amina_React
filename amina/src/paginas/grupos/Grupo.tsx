@@ -50,7 +50,7 @@ export default function Grupo(){
             <img className="muralPerfil" src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2020/07/23/tulipa-flor-roxa-pinteres.jpg" alt="" />
               <section id="postBox"> 
 
-                <label id="saudacao">GRUPO TESTE 1</label> 
+                <label id="saudacao">{}</label> 
                 <br />
                   <ul>
                     <li>Tópico:</li>
