@@ -1,3 +1,13 @@
+import {
+  Box,
+  Button,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Typography
+} from '@material-ui/core'
 import { userInfo } from 'os'
 import { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
@@ -6,6 +16,7 @@ import Navbar from '../../components/estaticos/navbar/Navbar'
 import ListaGrupo from '../../components/grupos/listaGrupo/ListaGrupo'
 import ListaPostagem from '../../components/postagens/listaPostagem/ListaPostagem'
 import Grupo from '../../models/Grupo'
+import Postagem from '../../models/Postagem'
 import { buscaId } from '../../services/Service'
 import './Grupos.css'
 
@@ -13,10 +24,19 @@ export default function Grupos() {
   const [grupo, setGrupo] = useState<Grupo>({} as Grupo)
   const { id } = useParams<{ id: string }>()
   const [token, setToken] = useLocalStorage('token')
+  const [postagens, setPostagens] = useState<Postagem[]>([])
   let navigate = useNavigate()
 
   async function findById(id: string) {
     await buscaId(`/api/Grupos/idGrupo/${id}`, setGrupo, {
+      headers: {
+        Authorization: token
+      }
+    })
+  }
+
+  async function findPostagem(id: string) {
+    await buscaId(`/api/Postagens/todasPostagensPorGrupo/${id}`, setPostagens, {
       headers: {
         Authorization: token
       }
@@ -33,8 +53,13 @@ export default function Grupos() {
   useEffect(() => {
     if (id !== undefined) {
       findById(id)
+      findPostagem(id)
     }
   }, [id])
+
+  useEffect(() => {
+    findPostagem('id')
+  }, [postagens.length])
 
   return (
     <>
@@ -72,30 +97,57 @@ export default function Grupos() {
               <section id="postBox">
                 <label id="saudacao">{grupo?.titulo}</label>
                 <br />
-
                 <br />
                 <h4>Sobre nós</h4> <br />
-                <p>
-                  {grupo?.descricao}
-                </p>
+                <p>{grupo?.descricao}</p>
                 <div className="linha"></div>
               </section>
 
               <section id="postagensBox">
                 <br />
                 <h2 id="tituloPostagem">Minhas Postagens</h2>
-                <ListaPostagem />
+
+                <div id="listaPostagem">
+                  {postagens.length > 0 &&
+                    postagens.map(postagem => (
+                      <Box m="0.7em" key={postagem.id}>
+                        <Card>
+                          <CardActionArea>
+                            <CardMedia
+                              component="img"
+                              height="140"
+                              image="https://i.imgur.com/n4v1WoJ.png"
+                              alt=""
+                            />
+                            <CardContent>
+                              <Typography
+                                gutterBottom
+                                variant="h5"
+                                component="div"
+                              >
+                                {postagem.titulo}
+                              </Typography>
+                              <Typography variant="body2">
+                                {postagem.descricao}
+                              </Typography>
+                              <Typography variant="body2"></Typography>
+                            </CardContent>
+                          </CardActionArea>
+                        </Card>
+                      </Box>
+                    ))}
+                </div>
               </section>
             </div>
           </main>
 
-               <nav id="grupoContainer">
-              <h1>Grupos</h1>  
-              <div className="grupoBox">
-                <ListaGrupo/>
-              </div>
-            </nav>
-          </div>
+          <nav id="grupoContainer">
+            <h1>Grupos</h1>
+            <div className="grupoBox">
+              <ListaGrupo />
+            </div>
+          </nav>
+        </div>
       </main>
     </>
   )
