@@ -20,7 +20,7 @@ import Postagem from '../../models/Postagem'
 import { buscaId } from '../../services/Service'
 import './Grupos.css'
 
-export default function idGrupo() {
+export default function Grupos() {
   const [grupo, setGrupo] = useState<Grupo>({} as Grupo)
   const { id } = useParams<{ id: string }>()
   const [token, setToken] = useLocalStorage('token')
