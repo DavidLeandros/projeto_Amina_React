@@ -16,7 +16,10 @@ import PerfilUsuario from '../paginas/perfil/PerfilUsuario'
 import TelaDenuncia from '../paginas/telaDenuncia/TelaDenuncia'
 import TermodUso from '../paginas/termoUso/TermodUso'
 import FormularioDenuncia from '../paginas/formularioDenuncia/FormularioDenuncia'
-import Grupos from '../paginas/grupos/Grupos'
+import Grupo from '../paginas/grupos/Grupo'
+import AtualizarPostagem from '../components/postagens/atualizarPostagem/AtualizarPostagem'
+import DeletarPostagemComponente from '../components/postagens/deletarPostagem/DeletarPostagemComponente'
+
 
 export function AppRoutes() {
   // const { usuario } = useContext(UsuarioContext)
@@ -33,9 +36,9 @@ export function AppRoutes() {
         <Route path="/listagrupos" element={<ListaGrupo />} />
         <Route path="/grupos/:id" element={<Grupos />}/>
 
-        <Route path="/formularioPostagem" element={<CadastroPost />} />
-        <Route path="/formularioPostagem/:id" element={<CadastroPost />} />
-        <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
+        <Route path="/formularioPostagem" element={<AtualizarPostagem/>} />
+        <Route path="/formularioPostagem/:id" element={<AtualizarPostagem />} />
+        <Route path="/deletarPostagem/:id" element={<DeletarPostagemComponente />} />
 
         <Route path="/formularioGrupo" element={<CadastroGrupo />} />
         <Route path="/formularioGrupo/:id" element={<CadastroGrupo />} />

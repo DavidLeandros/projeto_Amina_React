@@ -62,19 +62,19 @@ export default function ListaPostagem() {
                     <Typography variant="body2"></Typography>
                   </CardContent>
                 </CardActionArea>
-
+                
                 <CardActions>
-                    <Box display="flex" justifyContent="center" mb={1.5}>
+                    <Box  display="flex" justifyContent="center" mb={1.5}>
                       <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none">
                         <Box mx={1}>
-                          <Button variant="contained" className="marginLeft" size="small" color="primary">
+                          <Button variant="contained" className="marginLeft" size="small" color="primary" style={{backgroundColor:'#D8315B', height:'3em', marginTop:'0.8em'}}>
                             Atualizar
                           </Button>
                         </Box>
                       </Link>
                       <Link to={`/deletarPostagem/${post.id}`} className="text-decorator-none">
                         <Box mx={1}>
-                          <Button variant="contained" size="small" color="secondary">
+                          <Button variant="contained" size="small" color="secondary" style={{backgroundColor:'#ff7961', marginLeft:'1.5em', height:'3em', marginTop:'0.8em'}}>
                             Deletar
                           </Button>
                         </Box>
