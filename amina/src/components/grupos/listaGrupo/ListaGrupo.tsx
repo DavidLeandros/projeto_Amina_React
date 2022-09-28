@@ -44,7 +44,7 @@ export default function ListaGrupo() {
         {grupos.map(grupo => (
           <Box m={2} style={{ borderRadius: '10%', overflow: 'hidden' }}>
             <Card variant="outlined">
-              <Link to={`/grupos/${grupo.id}`}>
+              <Link to={`/grupos/${grupo.id}`} style={{ textDecoration: 'none' }}>
                 <CardContent id="cardContent">
                   <Typography id="titulo" style={{ fontWeight: 'bold' }}>
                     {grupo.titulo}{' '}

@@ -16,7 +16,7 @@ import PerfilUsuario from '../paginas/perfil/PerfilUsuario'
 import TelaDenuncia from '../paginas/telaDenuncia/TelaDenuncia'
 import TermodUso from '../paginas/termoUso/TermodUso'
 import FormularioDenuncia from '../paginas/formularioDenuncia/FormularioDenuncia'
-import Grupo from '../paginas/grupos/Grupo'
+import Grupos from '../paginas/grupos/Grupos'
 import AtualizarPostagem from '../components/postagens/atualizarPostagem/AtualizarPostagem'
 import DeletarPostagemComponente from '../components/postagens/deletarPostagem/DeletarPostagemComponente'
 
